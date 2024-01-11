@@ -38,7 +38,13 @@ const NotFound = () => {
             className="h-14 -mb-14 bg-secondary"
           />
           <div className="h-14 w-[245px] relative bg-black p-2 border-double border-4 border-secondary bg-opacity-60">
-            <p>Redirecting you home in: {redirectTime}</p>
+            <p>
+              Redirecting you home in:{" "}
+              <span className="countdown mt-1">
+                <span style={{ "--value": redirectTime }}></span>
+              </span>
+              s
+            </p>
           </div>
         </div>
       </div>

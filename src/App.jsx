@@ -6,7 +6,6 @@ import { appRoutes } from "./constants/appRoutes";
 
 function App() {
   const location = useLocation();
-  console.log(location);
   return (
     <>
       <Navbar />

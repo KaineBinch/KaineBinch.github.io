@@ -1,6 +1,6 @@
 import { wipPercentage } from "../constants/constants";
 
-const Wip = () => {
+const Wip = ({ showButton = true }) => {
   return (
     <div
       className="hero min-h-screen"
@@ -23,9 +23,11 @@ const Wip = () => {
           <p className="mb-5">
             This page is currently under construction, Please check back later.
           </p>
-          <a href="/" className="btn btn-primary">
-            Go home
-          </a>
+          {showButton && (
+            <a href="/" className="btn btn-primary">
+              Go home
+            </a>
+          )}
         </div>
       </div>
     </div>

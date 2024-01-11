@@ -1,4 +1,6 @@
+import Wip from "../components/wip";
+
 const AboutPage = () => {
-  return <></>;
+  return <Wip />;
 };
 export default AboutPage;

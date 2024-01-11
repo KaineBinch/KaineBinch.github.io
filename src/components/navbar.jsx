@@ -11,13 +11,17 @@ const Navbar = () => {
     if (elem) elem.blur();
   };
 
-  const LinkItem = (title, to, location) => {
+  const LinkItem = (title, to, location, my = 1) => {
     const activeClasses = location === to ? "bg-secondary text-base-300" : "";
     return (
       <li
         key={title}
         onClick={loseActiveFocus}
-        className={`rounded-md mx-3 ${activeClasses}`}
+        className={`rounded-md mx-3 ${activeClasses} my-${my}`}
+        style={{
+          marginTop: my,
+          marginBottom: my,
+        }}
       >
         <Link to={to} className="text-center inline">
           {title}
@@ -48,7 +52,7 @@ const Navbar = () => {
             tabIndex={0}
             className="menu dropdown-content mt-3 p-2 shadow bg-base-300 rounded-box w-50"
           >
-            {links.map(({ title, to }) => LinkItem(title, to, location))}
+            {links.map(({ title, to }) => LinkItem(title, to, location, 5))}
           </ul>
         </div>
       </div>

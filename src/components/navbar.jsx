@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import Social from "./socials";
 
 const Navbar = () => {
   const location = useLocation().pathname;
@@ -29,6 +30,7 @@ const Navbar = () => {
       </li>
     );
   };
+
   return (
     <div className="fixed z-10 navbar bg-base-300">
       <div className="flex-none">
@@ -57,11 +59,13 @@ const Navbar = () => {
         </div>
       </div>
       <div className="flex-1">
-        <a className="btn btn-ghost text-xl">Kaine Binch</a>
+        <div>
+          <ul className="flex-none menu menu-horizontal invisible md:visible">
+            {links.map(({ title, to }) => LinkItem(title, to, location))}
+          </ul>
+        </div>
       </div>
-      <ul className="flex-none menu menu-horizontal invisible md:visible">
-        {links.map(({ title, to }) => LinkItem(title, to, location))}
-      </ul>
+      <Social />
     </div>
   );
 };

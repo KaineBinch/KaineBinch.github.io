@@ -23,29 +23,29 @@ const HomePage = () => {
       transform: `scale(${leftTextOpacity * 0.1 + 0.9}) translate(${
         leftTextOpacity * 10 - 10
       }%, ${leftTextOpacity * 5 - 5}%)`,
-      rightText: {
-        opacity: rightTextOpacity,
-        transition: "opacity 0.8s ease-in-out, transform 0.4s ease-in-out",
-        transform: `scale(${rightTextOpacity * 0.1 + 0.9}) translate(${
-          rightTextOpacity * 10 - 10
-        }%, ${rightTextOpacity * -5 + 5}%)`,
-      },
+    },
+    rightText: {
+      opacity: rightTextOpacity,
+      transition: "opacity 0.8s ease-in-out, transform 0.4s ease-in-out",
+      transform: `scale(${rightTextOpacity * 0.1 + 0.9}) translate(${
+        rightTextOpacity * -10 + 10
+      }%, ${rightTextOpacity * -5 + 5}%)`,
     },
   };
   if (boxOpacity == 0) {
     setTimeout(() => setBoxOpacity(1), 150);
   }
+  if (leftTextOpacity == 0) {
+    setTimeout(() => setLeftTextOpacity(1), 300);
+  }
   if (avatarOpacity == 0) {
     setTimeout(() => setAvatarOpacity(1), 450);
   }
-  if (leftTextOpacity == 0) {
-    setTimeout(() => setLeftTextOpacity(1), 450);
-  }
   if (rightTextOpacity == 0) {
-    setTimeout(() => setRightTextOpacity(1), 450);
+    setTimeout(() => setRightTextOpacity(1), 600);
   }
   return (
-    <div className="pt-[68px] md:h-screen min-h-screen w-screen flex flex-col items-center">
+    <div className="pt-[68px] b-0 w-screen flex flex-col items-center">
       <div
         className="fixed top-0 h-screen w-screen z-[-1] invisible md:visible"
         style={{
@@ -66,7 +66,7 @@ const HomePage = () => {
         Kaine Binch
       </h1>
       <div
-        className="bg-base-300 bg-opacity-60 rounded-md backdrop-blur-[3px] mx-4 mt-4 max-w-screen-lg h-full pb-[24px]"
+        className="bg-base-300 bg-opacity-60 rounded-md backdrop-blur-[3px] mx-4 mt-4 max-w-screen-lg h-[77vh] pb-[24px]"
         style={styles.box}
       >
         <div className="flex flex-col text-white">

@@ -66,7 +66,7 @@ const HomePage = () => {
         Kaine Binch
       </h1>
       <div
-        className="bg-base-300 bg-opacity-60 rounded-md backdrop-blur-[3px] m-5 max-w-screen-lg h-full pb-14"
+        className="bg-base-300 bg-opacity-60 rounded-md backdrop-blur-[3px] mx-4 mt-4 max-w-screen-lg h-full pb-[24px]"
         style={styles.box}
       >
         <div className="flex flex-col text-white">
@@ -86,9 +86,9 @@ const HomePage = () => {
             </div>
           </div>
           <div className="flex">
-            <div className="flex-1" />
+            <div className="md:flex-1" />
             <div
-              className="flex flex-col flex-1 text-left pr-4 md:pr-8 items-center"
+              className="flex flex-col flex-1 text-left pr-4 md:pr-8 md:pl-0 items-center pl-4"
               style={styles.rightText}
             >
               <p>

@@ -62,7 +62,9 @@ const HomePage = () => {
           backgroundSize: "cover",
         }}
       />
-      <h1 className="text-6xl mt-10 font-bold text-neutral opacity-60">Kaine Binch</h1>
+      <h1 className="text-6xl mt-10 font-bold text-neutral opacity-60">
+        Kaine Binch
+      </h1>
       <div
         className="bg-base-300 bg-opacity-60 rounded-md backdrop-blur-[3px] m-5 max-w-screen-lg h-full pb-14"
         style={styles.box}
@@ -70,14 +72,14 @@ const HomePage = () => {
         <div className="flex flex-col text-white">
           <div className="flex mb-14">
             <div
-              className="flex-1 text-left pl-14 pt-14"
+              className="flex-1 text-left pl-6 md:pl-14 pt-14 "
               style={styles.leftText}
             >
-              <h1 className="text-6xl pb-4">Hi! 👋🏻</h1>
-              <h1 className="text-4xl ">I{"'"}m Kaine,</h1>
+              <h1 className="text-4xl md:text-6xl pb-4">Hi! 👋🏻</h1>
+              <h1 className="text-3xl md:text-4xl">I{"'"}m Kaine,</h1>
             </div>
             <div
-              className="flex flex-[2] flex-col justify-end items-center -mb-3"
+              className="flex flex-1 flex-col justify-end items-center -mb-3 -ml-16 md:-ml-40"
               style={styles.avatar}
             >
               <MyFace />
@@ -85,23 +87,27 @@ const HomePage = () => {
           </div>
           <div className="flex">
             <div className="flex-1" />
-            <div className="flex-1 text-left pr-8" style={styles.rightText}>
+            <div
+              className="flex flex-col flex-1 text-left pr-4 md:pr-8 items-center"
+              style={styles.rightText}
+            >
               <p>
                 I{"'"}m diving into the exciting world of software engineering,
                 and my journey{"'"}s got a little bit of everything. I am
                 currently focusing on javascript. This website has been built
                 with react, and I have also used a sprinkling of tailwind css
                 and daisyUI.
-                <p>
-                  I am currently a team manager in the social care sector, handling
-                  various different projects and teams. I{"'"}ve got an amazing
-                  partner and an energetic son who keep me busy.
-                </p>
-                So, why the shift to software engineering? In recent years, i{"'"}ve been moving into more technical roles, and it has been evident that this is where my skills are best suited.
+                <br />I am currently a team manager in the social care sector,
+                handling various different projects and teams. I{"'"}ve got an
+                amazing partner and an energetic son who keep me busy.
+                <br />
+                So, why the shift to software engineering? In recent years, i
+                {"'"}ve been moving into more technical roles, and it has been
+                evident that this is where my skills are best suited.
               </p>
-                <button className="btn btn-outline btn-neutral ml-[150px]" onClick={() =>  window.location.href='/#/about'}>
+              <a className="btn btn-outline btn-neutral mt-3" href="/#/about">
                 About me...
-                </button>
+              </a>
             </div>
           </div>
         </div>

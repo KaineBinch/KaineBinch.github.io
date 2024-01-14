@@ -62,7 +62,7 @@ const HomePage = () => {
           backgroundSize: "cover",
         }}
       />
-      <h1 className="text-6xl mt-10 font-bold text-neutral opacity-60">
+      <h1 className="text-6xl mt-10 font-bold text-base-300 opacity-60">
         Kaine Binch
       </h1>
       <div

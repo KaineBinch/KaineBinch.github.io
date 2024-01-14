@@ -58,14 +58,16 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      <div className="flex-1">
+      <div className="flex-1 hidden md:block justify-self-start">
         <div>
-          <ul className="flex-none menu menu-horizontal invisible md:visible">
+          <ul className="flex menu menu-horizontal invisible md:visible">
             {links.map(({ title, to }) => LinkItem(title, to, location))}
           </ul>
         </div>
       </div>
-      <Social />
+      <div className="flex-1 justify-end">
+        <Social />
+      </div>
     </div>
   );
 };

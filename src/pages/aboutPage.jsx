@@ -105,8 +105,8 @@ const AboutPage = () => {
                 {"'"}ve been moving into more technical roles, and it has been
                 evident that this is where my skills are best suited.
               </p>
-              <a className="btn btn-outline btn-neutral mt-3" href="/#/about">
-                About me...
+              <a className="btn btn-outline btn-neutral mt-3" href="/">
+                Back home...
               </a>
             </div>
           </div>

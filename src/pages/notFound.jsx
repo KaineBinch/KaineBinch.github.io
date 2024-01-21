@@ -32,19 +32,22 @@ const NotFound = () => {
       <div className="hero-content text-center text-neutral-content">
         <div className="max-w-md">
           <h1 className="text-8xl font-bold">404</h1>
-          <p className="mb-14">Looks like that page isn{"'"}t available</p>
+          <p className="mb-10">Looks like that page isn{"'"}t available</p>
           <div
             style={styles.progressBar}
-            className="h-14 -mb-14 bg-secondary"
+            className="h-16 -mb-16 bg-secondary"
           />
-          <div className="h-14 w-[245px] relative bg-black p-2 border-double border-4 border-secondary bg-opacity-60">
+          <div className="h-16 w-[245px] relative bg-black p-1 border-double border-4 border-secondary bg-opacity-60">
             <p>
-              Redirecting you home in:{" "}
+              Automatically sending you home in:{" "}
               <span className="countdown mt-1">
                 <span style={{ "--value": redirectTime }}></span>
               </span>
               s
             </p>
+            <a href="/" className="btn mt-8">
+              Take me home now!
+            </a>
           </div>
         </div>
       </div>

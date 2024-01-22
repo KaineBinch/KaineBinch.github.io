@@ -6,6 +6,7 @@ const Navbar = () => {
   const links = [
     { title: "Home", to: "/" },
     { title: "About", to: "/about" },
+    { title: "Projects", to: "/projects"}
   ];
   const loseActiveFocus = () => {
     const elem = document.activeElement;

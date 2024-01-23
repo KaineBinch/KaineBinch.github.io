@@ -1,8 +1,10 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import SplitText from "../utils/splitText";
 import { motion as m } from "framer-motion";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const styles = {
   clipPath: { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" },
@@ -22,6 +24,10 @@ const HomePage = () => {
     },
     { scope: container }
   );
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
 
   return (
     <>
@@ -51,7 +57,7 @@ const HomePage = () => {
         </div>
         <hr className="border-neutral-300" />
         <div className="max-w-full flex bg-neutral md:flex-row flex-col p-10">
-          <div className="flex-1 text-neutral-200">
+          <div className="flex-1 text-neutral-200" data-aos="fade-up">
             <h1 className="text-5xl font-bold mb-5">About me</h1>
             <a
               className="btn btn-primary text-neutral-200 hidden md:inline-flex"
@@ -60,7 +66,10 @@ const HomePage = () => {
               Learn more
             </a>
           </div>
-          <div className="flex flex-col flex-[2] px-2 text-start text-neutral-200">
+          <div
+            className="flex flex-col flex-[2] px-2 text-start text-neutral-200"
+            data-aos="fade-up"
+          >
             <p>
               Right now I am focusing on mastering javascript. This website has
               been built with react, I have also used tailwind css, framer
@@ -79,6 +88,29 @@ const HomePage = () => {
               href="/#/about"
             >
               Learn more
+            </a>
+          </div>
+        </div>
+        <hr className="border-neutral-300" />
+        <div
+          className="max-w-full flex bg-neutral md:flex-row flex-col p-10"
+          data-aos="fade-up"
+        >
+          <div className="flex-1 text-neutral-200">
+            <h1 className="text-5xl font-bold mb-5">Projects</h1>
+          </div>
+          <div className="flex flex-col flex-[2] px-2 text-start text-neutral-200 ">
+            <a
+              className="btn btn-primary text-neutral-200 hidden md:inline-flex border-neutral-400"
+              href="/#/projects"
+            >
+              Project 1
+            </a>
+            <a
+              className="btn btn-primary text-neutral-200 hidden md:inline-flex border-neutral-400"
+              href="/#/projects"
+            >
+              Project 2
             </a>
           </div>
         </div>

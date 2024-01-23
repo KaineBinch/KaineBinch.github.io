@@ -10,7 +10,7 @@ const Social = () => {
             viewBox="-5,-5,32,32"
           >
             <g
-              fill="#ffffff"
+              fill="#81a1c1"
               fillRule="nonzero"
               stroke="none"
               strokeWidth="1"
@@ -44,7 +44,7 @@ const Social = () => {
             viewBox="0,0,256,256"
           >
             <g
-              fill="#ffffff"
+              fill="#81a1c1"
               fillRule="nonzero"
               stroke="none"
               strokeWidth="1"
@@ -80,7 +80,7 @@ const Social = () => {
             viewBox="0,0,256,256"
           >
             <g
-              fill="#ffffff"
+              fill="#81a1c1"
               fillRule="nonzero"
               stroke="none"
               strokeWidth="1"
@@ -116,7 +116,7 @@ const Social = () => {
             viewBox="0,0,256,256"
           >
             <g
-              fill="#ffffff"
+              fill="#81a1c1"
               fillRule="nonzero"
               stroke="none"
               strokeWidth="1"

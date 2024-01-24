@@ -121,17 +121,18 @@ const AboutPage = () => {
                       As a care team leader, I have the responsibilities of
                       managing a team of staff, conducting audits and
                       performance tasks. With extensive experience in a role
-                      impacting people's lives, I emphasize logical
+                      impacting people{"'"}s lives, I emphasize logical
                       justifications for decisions. Building positive
                       relationships at all organizational levels and excellent
                       communication skills are crucial aspects of my job. In my
                       current position, I revamped the Spot Contracting
                       framework, facilitating access for homecare agencies to
-                      the City Council's list. This involved creating auditing
-                      procedures, negotiating hourly rates, and establishing a
-                      secure bidding system. Implementing LEAN principles, I
-                      iteratively improved the system, significantly reducing
-                      wait times in Nottingham City by over 90%.
+                      the City Council{"'"}s list. This involved creating
+                      auditing procedures, negotiating hourly rates, and
+                      establishing a secure bidding system. Implementing LEAN
+                      principles, I iteratively improved the system,
+                      significantly reducing wait times in Nottingham City by
+                      over 90%.
                     </div>
                     <hr />
                   </li>
@@ -161,20 +162,20 @@ const AboutPage = () => {
                       In my role as a Business Support Officer, I played a
                       crucial part in crafting reports for senior management and
                       actively contributed to strategic meetings that shaped the
-                      social care department's direction. Managing lower-level
-                      staff involved overseeing performance, conducting
-                      supervisions, and handling appraisals. Additionally, I
-                      nurtured relationships with suppliers, ensuring the
-                      cost-effective and safe procurement of essential equipment
-                      during the challenging times of the COVID pandemic. My
-                      responsibilities extended to onboarding new staff,
-                      providing access to databases and remote working
-                      facilities, and offering clear instructions as a mobile
-                      phone champion for a workforce exceeding 250 individuals.
-                      Embracing change, I adeptly navigated evolving roles and
-                      responsibilities at Nottingham City Council, aligning
-                      seamlessly with government directives and service
-                      adaptations.
+                      social care department{"'"}s direction. Managing
+                      lower-level staff involved overseeing performance,
+                      conducting supervisions, and handling appraisals.
+                      Additionally, I nurtured relationships with suppliers,
+                      ensuring the cost-effective and safe procurement of
+                      essential equipment during the challenging times of the
+                      COVID pandemic. My responsibilities extended to onboarding
+                      new staff, providing access to databases and remote
+                      working facilities, and offering clear instructions as a
+                      mobile phone champion for a workforce exceeding 250
+                      individuals. Embracing change, I adeptly navigated
+                      evolving roles and responsibilities at Nottingham City
+                      Council, aligning seamlessly with government directives
+                      and service adaptations.
                     </div>
                     <hr />
                   </li>
@@ -202,16 +203,16 @@ const AboutPage = () => {
                         Homecare Co-ordinator
                       </div>
                       In my position as a coordinator for Nottingham City
-                      Council's Home Care Service, I managed the workload for a
-                      team of 40+ Care Workers, ensuring citizen safety and
-                      efficient service delivery. Coordinating over 50 service
-                      users daily, many requiring timely medication, demanded
-                      meticulous attention to detail. Collaboration within the
-                      team was essential, emphasizing effective communication,
-                      active listening, empathy, and respectful feedback.
-                      Regular team meetings fostered problem-solving and
-                      maintained good team morale. Handling diverse phone calls
-                      involving colleagues, Health and Social Care
+                      Council{"'"}s Home Care Service, I managed the workload
+                      for a team of 40+ Care Workers, ensuring citizen safety
+                      and efficient service delivery. Coordinating over 50
+                      service users daily, many requiring timely medication,
+                      demanded meticulous attention to detail. Collaboration
+                      within the team was essential, emphasizing effective
+                      communication, active listening, empathy, and respectful
+                      feedback. Regular team meetings fostered problem-solving
+                      and maintained good team morale. Handling diverse phone
+                      calls involving colleagues, Health and Social Care
                       professionals, and the public, I honed conflict resolution
                       skills, relying on communication and service knowledge to
                       defuse challenging situations.
@@ -275,13 +276,13 @@ const AboutPage = () => {
                         June 2013 - March 2015
                       </time>
                       <div className="text-lg font-black">
-                        McDonald's Restaurants
+                        McDonald{"'"}s Restaurants
                       </div>
-                      Working as a Crew Member at McDonald's Restaurants during
-                      my studies, I honed time management skills, balancing work
-                      and academics. From taking orders to food preparation,
-                      attention to detail was crucial. Handling cash
-                      transactions, I prioritized trustworthiness to avoid
+                      Working as a Crew Member at McDonald{"'"}s Restaurants
+                      during my studies, I honed time management skills,
+                      balancing work and academics. From taking orders to food
+                      preparation, attention to detail was crucial. Handling
+                      cash transactions, I prioritized trustworthiness to avoid
                       discrepancies. Upholding exceptional customer service, I
                       managed complaints and defused aggressive situations with
                       composure. This role improved my multitasking abilities,

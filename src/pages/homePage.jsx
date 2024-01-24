@@ -100,18 +100,22 @@ const HomePage = () => {
             <h1 className="text-5xl font-bold mb-5">Projects</h1>
           </div>
           <div className="flex flex-col flex-[2] px-2 text-start text-neutral-200 ">
-            <a
-              className="btn btn-primary text-neutral-200 hidden md:inline-flex border-neutral-400"
-              href="/#/projects"
-            >
-              Project 1
-            </a>
-            <a
-              className="btn btn-primary text-neutral-200 hidden md:inline-flex border-neutral-400"
-              href="/#/projects"
-            >
-              Project 2
-            </a>
+            {false && (
+              <div>
+                <a
+                  className="btn btn-primary text-neutral-200 hidden md:inline-flex border-neutral-400"
+                  href="/#/projects"
+                >
+                  Project 1
+                </a>
+                <a
+                  className="btn btn-primary text-neutral-200 hidden md:inline-flex border-neutral-400"
+                  href="/#/projects"
+                >
+                  Project 2
+                </a>
+              </div>
+            )}
           </div>
         </div>
       </div>

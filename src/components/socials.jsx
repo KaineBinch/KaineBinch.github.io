@@ -103,7 +103,7 @@ const Social = () => {
       </div>
       <div className="HackerRank mx-2 btn btn-square btn-ghost">
         <a
-          href="https://www.hackerrank.com/profile/kainebinch911"
+          href="https://www.hackerrank.com/profile/kainebinch"
           target="_blank"
           rel="noreferrer"
         >

@@ -13,12 +13,14 @@ import {
   faChevronRight,
   faPhone,
   faEnvelope,
+  faFilePdf,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
   fab,
   faChevronRight,
   faPhone,
+  faFilePdf,
   faEnvelope,
   faSquareFacebook,
   faInstagram,

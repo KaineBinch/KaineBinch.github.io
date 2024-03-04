@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const CvLeftPane = () => {
   return (
     <>
-      <div className="flex flex-col bg-white md:w-[300px] md:pl-16">
+      <div className="flex flex-col bg-white md:w-[300px] md:pl-16 md:mb-20">
         <div className="flex flex-col h-[154px]">
           <h1 className="text-center text-xl font-extrabold text-[#1c1a73] ">
             About Me
@@ -21,19 +21,19 @@ const CvLeftPane = () => {
           </h1>
           <div className="flex flex-col items-center text-[#1c1a73] text-[16px]">
             <div className="flex flex-row pt-[25px] place-content-between w-full">
-              <FontAwesomeIcon icon="fa-solid fa-phone" />
+              <FontAwesomeIcon className="w-[25px] h-[25px]" icon="fa-solid fa-phone" />
               <p className="">07802 766 962</p>
             </div>
             <div className="flex flex-row pt-[10px]  place-content-between w-full">
-              <FontAwesomeIcon icon="fa-solid fa-envelope" />
+              <FontAwesomeIcon className="w-[25px] h-[25px]" icon="fa-solid fa-envelope" />
               <p>kainebinch@live.com</p>
             </div>
             <div className="flex flex-row pt-[10px]  place-content-between w-full">
-              <FontAwesomeIcon icon="fa-solid fa-house" />
+              <FontAwesomeIcon className="w-[25px] h-[25px]" icon="fa-solid fa-house" />
               <p>Kimberley, Nottingham</p>
             </div>
             <div className="flex flex-row pt-[10px]  place-content-between w-full">
-              <FontAwesomeIcon icon="fa-solid fa-globe" />
+              <FontAwesomeIcon className="w-[25px] h-[25px]" icon="fa-solid fa-globe" />
               <p>kainebinch.dev</p>
             </div>
           </div>
@@ -44,7 +44,7 @@ const CvLeftPane = () => {
           </h1>
           <div className="flex flex-col items-center text-[#1c1a73] text-[16px]">
             <div className="flex flex-row items-center pt-[25px] place-content-between w-full">
-              <FontAwesomeIcon
+              <FontAwesomeIcon className="w-[25px] h-[25px]"
                 icon="fa-brands fa-github"
                 style={{ color: "#1c1a73" }}
               />
@@ -54,7 +54,7 @@ const CvLeftPane = () => {
               </div>
             </div>
             <div className="flex flex-row items-center pt-[10px]  place-content-between w-full">
-              <FontAwesomeIcon
+              <FontAwesomeIcon className="w-[25px] h-[25px]"
                 icon="fa-brands fa-linkedin"
                 style={{ color: "#1c1a73" }}
               />
@@ -64,7 +64,7 @@ const CvLeftPane = () => {
               </div>
             </div>
             <div className="flex flex-row items-center pt-[10px]  place-content-between w-full">
-              <FontAwesomeIcon
+              <FontAwesomeIcon className="w-[25px] h-[25px]"
                 icon="fa-brands fa-hackerrank"
                 style={{ color: "#1c1a73" }}
               />
@@ -96,6 +96,94 @@ const CvLeftPane = () => {
               </div>
               <div>
                 <p className="text-end font-bold">Merit Merit Merit</p>
+              </div>
+            </div>
+            <div className="flex flex-row items-center pt-[25px] place-content-between w-full">
+              <div>
+                <p className="text-start font-bold">GCSE's:</p>
+              </div>
+              <div>
+                <p className="text-end">Bluecoat Academy 2007-2012</p>
+              </div>
+            </div>
+            <div className="flex flex-row items-center pt-[25px] place-content-between w-full">
+              <div>
+                <p className="text-start">
+                  Maths
+                </p>
+              </div>
+              <div>
+                <p className="text-end font-bold">A</p>
+              </div>
+            </div>
+            <div className="flex flex-row items-center pt-[25px] place-content-between w-full">
+              <div>
+                <p className="text-start">
+                  English
+                </p>
+              </div>
+              <div>
+                <p className="text-end font-bold">A</p>
+              </div>
+            </div>
+            <div className="flex flex-row items-center pt-[25px] place-content-between w-full">
+              <div>
+                <p className="text-start">
+                  Science {"(Triple Award)"}
+                </p>
+              </div>
+              <div>
+                <p className="text-end font-bold">A</p>
+              </div>
+            </div>
+            <div className="flex flex-row items-center pt-[25px] place-content-between w-full">
+              <div>
+                <p className="text-start">
+                  Physical Education
+                </p>
+              </div>
+              <div>
+                <p className="text-end font-bold">A</p>
+              </div>
+            </div>
+            <div className="flex flex-row items-center pt-[25px] place-content-between w-full">
+              <div>
+                <p className="text-start">
+                  Religious Studies
+                </p>
+              </div>
+              <div>
+                <p className="text-end font-bold">A</p>
+              </div>
+            </div>
+            <div className="flex flex-row items-center pt-[25px] place-content-between w-full">
+              <div>
+                <p className="text-start">
+                  Psychology
+                </p>
+              </div>
+              <div>
+                <p className="text-end font-bold">B</p>
+              </div>
+            </div>
+            <div className="flex flex-row items-center pt-[25px] place-content-between w-full">
+              <div>
+                <p className="text-start">
+                  ICT
+                </p>
+              </div>
+              <div>
+                <p className="text-end font-bold">Merit</p>
+              </div>
+            </div>
+            <div className="flex flex-row items-center pt-[25px] place-content-between w-full">
+              <div>
+                <p className="text-start">
+                  Histoy
+                </p>
+              </div>
+              <div>
+                <p className="text-end font-bold">C</p>
               </div>
             </div>
           </div>

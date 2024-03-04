@@ -7,7 +7,7 @@ const Cv = () => {
     <>
       <div className="flex flex-col items-center justify-center drop-shadow-2xl">
         <CvHeader />
-        <div className="flex w-screen bg-white max-w-[755px] max-h-[1067px]">
+        <div className="flex w-screen bg-white max-w-[755px] h-[3175px] mb-10">
           <CvLeftPane />
           <CvRightPane />
         </div>

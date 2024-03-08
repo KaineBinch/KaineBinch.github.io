@@ -3,23 +3,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const CvLeftPane = () => {
   return (
     <>
-      <div className="flex flex-col bg-white md:w-[300px] md:pl-16 md:mb-20">
-        <div className="flex flex-col h-[244px]">
-          <h1 className="text-center text-xl font-extrabold text-[#1c1a73] ">
+      <div className="flex flex-col bg-white md:w-[300px] md:mb-20">
+        <div className="flex flex-col mb-[10px] md:mb-[25px]">
+          <hr className="md:hidden border-gray-300 w-4/5 mx-auto my-6" />
+          <h1 className="text-center text-xl font-extrabold text-[#1c1a73] mb-2">
             About Me
           </h1>
-          <p className="text-[#1c1a73] text-left">
+          <p className="text-[#1c1a73] text-left md:pl-5 lg:pl-0 md:px-0 px-10 mb-8">
             Experienced Team Manager in the social care sector, adept at
             fostering teamwork and empowering others. I{"’"}m currently teaching
             myself JavaScript and React. Whilst maintaining a passion for
             personal growth, with a focus on integrating my leadership skills.
           </p>
         </div>
-        <div className="flex flex-col mt-[25px]">
+        <div className="flex flex-col">
           <h1 className="text-center text-xl font-bold text-white bg-[#1c1a73]">
             CONTACT
           </h1>
-          <div className="flex flex-col items-center text-[#1c1a73] text-[16px]">
+          <div className="flex flex-col items-center text-[#1c1a73] text-[16px] md:pl-5 lg:pl-0 md:px-0 px-10">
             <div className="flex flex-row pt-[25px] place-content-between w-full">
               <FontAwesomeIcon
                 className="w-[25px] h-[25px]"
@@ -27,21 +28,21 @@ const CvLeftPane = () => {
               />
               <p className="">07802 766 962</p>
             </div>
-            <div className="flex flex-row pt-[10px]  place-content-between w-full">
+            <div className="flex flex-row pt-[25px]  place-content-between w-full">
               <FontAwesomeIcon
                 className="w-[25px] h-[25px]"
                 icon="fa-solid fa-envelope"
               />
               <p>kainebinch@live.com</p>
             </div>
-            <div className="flex flex-row pt-[10px]  place-content-between w-full">
+            <div className="flex flex-row pt-[25px]  place-content-between w-full">
               <FontAwesomeIcon
                 className="w-[25px] h-[25px]"
                 icon="fa-solid fa-house"
               />
               <p>Kimberley, Nottingham</p>
             </div>
-            <div className="flex flex-row pt-[10px]  place-content-between w-full">
+            <div className="flex flex-row pt-[25px]  place-content-between w-full">
               <FontAwesomeIcon
                 className="w-[25px] h-[25px]"
                 icon="fa-solid fa-globe"
@@ -54,7 +55,7 @@ const CvLeftPane = () => {
           <h1 className="text-center text-xl font-bold text-white bg-[#1c1a73]">
             ONLINE
           </h1>
-          <div className="flex flex-col items-center text-[#1c1a73] text-[16px]">
+          <div className="flex flex-col items-center text-[#1c1a73] text-[16px] md:pl-5 lg:pl-0 md:px-0 px-10">
             <div className="flex flex-row items-center pt-[25px] place-content-between w-full">
               <FontAwesomeIcon
                 className="w-[25px] h-[25px]"
@@ -94,8 +95,8 @@ const CvLeftPane = () => {
           <h1 className="text-center text-xl font-bold text-white bg-[#1c1a73]">
             EDUCATION
           </h1>
-          <div className="flex flex-col items-center text-[#1c1a73] text-[16px]">
-            <div className="flex flex-row items-center pt-[25px] place-content-between w-full">
+          <div className="flex flex-col items-center text-[#1c1a73] text-[16px] md:pl-5 lg:pl-0 md:px-0 px-10">
+            <div className="flex flex-row items-center pt-[25px] place-content-between w-full ">
               <div>
                 <p className="text-start font-bold">Higher Education:</p>
               </div>
@@ -177,7 +178,7 @@ const CvLeftPane = () => {
                 <p className="text-end font-bold">Merit</p>
               </div>
             </div>
-            <div className="flex flex-row items-center pt-[25px] place-content-between w-full">
+            <div className="flex flex-row items-center pt-[25px] place-content-between w-full pb-[25px]">
               <div>
                 <p className="text-start">Histoy</p>
               </div>

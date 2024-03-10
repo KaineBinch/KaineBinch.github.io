@@ -7,7 +7,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        'md': '768px',
+      },
+      print: {
+        md: '@media print and (min-width: 768px)',
+      }
+    },
   },
   plugins: [daisyui],
   daisyui: {

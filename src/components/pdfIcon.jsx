@@ -1,16 +1,17 @@
 const PdfIcon = () => {
   const print = () => {
+    document.body.classList.add("print-md");
     window.print();
+    document.body.classList.remove("print-md");
   };
   return (
-    <a onClick={print} className="print:hidden">
+    <a onClick={print} className="print:hidden cursor-pointer">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         version="1.1"
         x="0px"
         y="0px"
-        viewBox="0 0 100 100 "
-        enableBackground={{ new: " 0 0 0 0" }}
+        viewBox="0 0 100 100"
       >
         <g
           fill="#1c1a73"

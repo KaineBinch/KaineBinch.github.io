@@ -1,11 +1,11 @@
+import CV from "../assets/KaineCV.pdf";
+
 const PdfIcon = () => {
-  const print = () => {
-    document.body.classList.add("print-md");
-    window.print();
-    document.body.classList.remove("print-md");
-  };
+  // const print = () => {
+  //   window.print();
+  // };
   return (
-    <a onClick={print} className="print:hidden cursor-pointer">
+    <a href={CV} className="print:hidden cursor-pointer">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         version="1.1"

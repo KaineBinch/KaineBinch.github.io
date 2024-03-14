@@ -92,33 +92,30 @@ const HomePage = () => {
           </div>
         </div>
         <hr className="border-neutral-300" />
-        {false && (
-          <div className="max-w-full flex flex-col bg-neutral md:flex-row flex-col mb-5 p-10">
-            <div className="flex-1 text-neutral-200" data-aos="fade-right">
-              <h1 className="text-5xl font-bold mb-5">Projects</h1>
-            </div>
-            <div className="flex flex-col flex-[2] px-2 mb-1 text-start text-neutral-200">
-              {false && (
-                <div data-aos="fade-left">
-                  <hr className="border-neutral-300" />
-                  <a
-                    className="text-neutral-200 py-3 text-xl  md:inline-flex border-neutral-400"
-                    href="/#/projects"
-                  >
-                    Project 1
-                  </a>
-                  <hr className="border-neutral-300" />
-                  <a
-                    className=" text-neutral-200 py-3 text-xl md:inline-flex border-neutral-400"
-                    href="/#/projects"
-                  >
-                    Project 2
-                  </a>
-                </div>
-              )}
+
+        <div className="max-w-full flex flex-col bg-neutral md:flex-row flex-col mb-5 p-10">
+          <div className="flex-1 text-neutral-200" data-aos="fade-right">
+            <h1 className="text-5xl font-bold mb-5">Projects</h1>
+          </div>
+          <div className="flex flex-col flex-[2] px-2 mb-1 text-start text-neutral-200">
+            <div data-aos="fade-left">
+              <hr className="border-neutral-300" />
+              <a
+                className="text-neutral-200 py-3 text-xl  md:inline-flex border-neutral-400"
+                href="/#/projects"
+              >
+                Project 1
+              </a>
+              <hr className="border-neutral-300" />
+              <a
+                className=" text-neutral-200 py-3 text-xl md:inline-flex border-neutral-400"
+                href="/#/projects"
+              >
+                Project 2
+              </a>
             </div>
           </div>
-        )}
+        </div>
       </div>
     </>
   );

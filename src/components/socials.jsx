@@ -10,8 +10,7 @@ const Social = () => {
             y="0px"
             width="48"
             height="46"
-            viewBox="0 -8  48 66"
-            style={{ enableBackground: "new 0 0 52 52;" }}
+            viewBox="0,-7,48,63"
           >
             <g
               fill="#81a1c1"

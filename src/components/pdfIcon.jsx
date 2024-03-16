@@ -5,7 +5,12 @@ const PdfIcon = () => {
   //   window.print();
   // };
   return (
-    <a href={CV} className="print:hidden cursor-pointer">
+    <a
+      href={CV}
+      className="print:hidden cursor-pointer"
+      rel="noreferrer"
+      target="_blank"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         version="1.1"

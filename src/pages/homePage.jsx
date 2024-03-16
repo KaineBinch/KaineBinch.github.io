@@ -96,22 +96,40 @@ const HomePage = () => {
         <div className="max-w-full flex flex-col bg-neutral md:flex-row flex-col mb-5 p-10">
           <div className="flex-1 text-neutral-200" data-aos="fade-right">
             <h1 className="text-5xl font-bold mb-5">Projects</h1>
+            <a
+              className="btn btn-primary text-neutral-200 hidden md:inline-flex"
+              href="/#/projects"
+            >
+              Explore Projects
+            </a>
           </div>
-          <div className="flex flex-col flex-[2] px-2 mb-1 text-start text-neutral-200">
+          <div className="flex flex-col flex-[2] p-2 mb-1 md:text-start text-neutral-200">
             <div data-aos="fade-left">
               <hr className="border-neutral-300" />
-              <a
-                className="text-neutral-200 py-3 text-xl  md:inline-flex border-neutral-400"
-                href="/#/projects"
-              >
-                Project 1
-              </a>
+              <div className="md:my-4 my-5">
+                <m.a
+                  whileHover={{
+                    originX: 0,
+                    scale: 1.1,
+                  }}
+                  whileTap={{ scale: 0.8 }}
+                  className="text-neutral-200 text-xl  md:inline-flex border-neutral-400"
+                  href="https://kainebinch.dev/adminDashboard"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Admin Dashboard
+                </m.a>
+              </div>
               <hr className="border-neutral-300" />
+            </div>
+
+            <div data-aos="fade-left">
               <a
-                className=" text-neutral-200 py-3 text-xl md:inline-flex border-neutral-400"
-                href="/#/projects"
+                className="btn btn-primary md:hidden mt-5 self-center"
+                href="/#/about"
               >
-                Project 2
+                Explore Projects
               </a>
             </div>
           </div>

@@ -85,7 +85,7 @@ const AboutPage = () => {
             </div>
           </div>
           <div>
-            <div className="font-semibold">
+            <div className="px-10 font-semibold">
               <p>
                 Here you will find a shortened version of my job history. For a
                 more detailed version please click on my CV at the top of the
@@ -113,7 +113,7 @@ const AboutPage = () => {
                         />
                       </svg>
                     </div>
-                    <div className="timeline-start md:text-end mb-10">
+                    <div className="timeline-start md:text-end mb-10 ml-5">
                       <time className="font-mono italic">
                         Sep 2020 - Current
                       </time>
@@ -195,7 +195,7 @@ const AboutPage = () => {
                         />
                       </svg>
                     </div>
-                    <div className="timeline-start md:text-end mb-10">
+                    <div className="timeline-start md:text-end ml-5 mb-10">
                       <time className="font-mono italic">
                         July 2015 - January 2017
                       </time>
@@ -271,7 +271,7 @@ const AboutPage = () => {
                         />
                       </svg>
                     </div>
-                    <div className="timeline-start md:text-end mb-10">
+                    <div className="timeline-start ml-5 md:text-end mb-10">
                       <time className="font-mono italic">
                         June 2013 - March 2015
                       </time>

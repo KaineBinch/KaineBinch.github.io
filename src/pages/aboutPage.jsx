@@ -2,7 +2,6 @@ import image from "../assets/kaineRiverWeb.jpg";
 import mobileImage from "../assets/kaineRiverMobile.jpg";
 import MyFace from "../components/myFace";
 import { useState } from "react";
-import { jobs } from "../constants/jobs";
 import Jobs from "../components/jobs";
 
 const AboutPage = () => {

@@ -114,7 +114,7 @@ const HomePage = () => {
             <div data-aos="fade-right">
               <a
                 className="btn btn-primary md:hidden mt-5 self-center"
-                href="/#/about"
+                href="/#/projects"
               >
                 Explore Projects
               </a>

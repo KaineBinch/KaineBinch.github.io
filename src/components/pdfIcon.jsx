@@ -1,11 +1,20 @@
 import CV from "../assets/KaineCV.pdf";
+import { motion as m } from "framer-motion";
 
 const PdfIcon = () => {
   // const print = () => {
   //   window.print();
   // };
   return (
-    <a
+    <m.a
+      initial={{ opacity: 0, x: -20, y: 10 }}
+      animate={{ opacity: 1, x: 0, y: 0 }}
+      transition={{
+        delay: 0.2,
+        duration: 0.3 + 0.1 * Math.random(),
+        ease: "easeInOut",
+      }}
+      exit={{ opacity: 0, x: 6, y: 10 }}
       href={CV}
       className="print:hidden cursor-pointer"
       rel="noreferrer"
@@ -43,7 +52,7 @@ const PdfIcon = () => {
           </g>
         </g>
       </svg>
-    </a>
+    </m.a>
   );
 };
 

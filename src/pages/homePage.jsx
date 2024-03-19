@@ -33,7 +33,7 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="">
+      <div className="overflow-x-hidden">
         <div className="hero min-h-[92svh] bg-base-100">
           <div className="hero-content text-center">
             <div className="max-w-full">
@@ -44,10 +44,10 @@ const HomePage = () => {
                 )}
               </div>
               <m.p
-                className="py-6"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.8 }}
+                className="py-6"
               >
                 Nottingham based software engineer dedicated to transforming
                 ideas into efficient, user-centric solutions. With a fresh
@@ -58,7 +58,7 @@ const HomePage = () => {
           </div>
         </div>
         <hr className="border-neutral-300" />
-        <div className="max-w-full flex bg-neutral md:flex-row flex-col p-10">
+        <div className="max-w-screen flex bg-neutral md:flex-row flex-col p-10 overflow-x-hidden">
           <div className="flex-1 text-neutral-200" data-aos="fade-right">
             <h1 className="text-5xl font-bold mb-5">About me</h1>
             <a
@@ -69,7 +69,7 @@ const HomePage = () => {
             </a>
           </div>
           <div
-            className="flex flex-col flex-[2] px-2 text-start text-neutral-200"
+            className="flex flex-col flex-[2] px-2 mr-10 text-start text-neutral-200"
             data-aos="fade-left"
           >
             <p>

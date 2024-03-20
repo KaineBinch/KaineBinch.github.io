@@ -69,7 +69,7 @@ const HomePage = () => {
             </a>
           </div>
           <div
-            className="flex flex-col flex-[2] px-2 mr-10 text-start text-neutral-200"
+            className="flex flex-col flex-[2] px-2 text-start text-neutral-200"
             data-aos="fade-left"
           >
             <p>

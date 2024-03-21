@@ -1,10 +1,9 @@
-import CV from "../assets/KaineCV.pdf";
 import { motion as m } from "framer-motion";
 
 const PdfIcon = () => {
-  // const print = () => {
-  //   window.print();
-  // };
+  const print = () => {
+    window.print();
+  };
   return (
     <m.a
       initial={{ opacity: 0, x: -20, y: 10 }}
@@ -15,7 +14,7 @@ const PdfIcon = () => {
         ease: "easeInOut",
       }}
       exit={{ opacity: 0, x: 6, y: 10 }}
-      href={CV}
+      onClick={print}
       className="print:hidden cursor-pointer"
       rel="noreferrer"
       target="_blank"

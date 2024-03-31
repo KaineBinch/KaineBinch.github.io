@@ -1,6 +1,6 @@
 import { motion as m } from "framer-motion";
 
-const HomeProject = ({ title }) => {
+const HomeProject = ({ title, link }) => {
   return (
     <>
       <div className="md:my-4 my-5 ">
@@ -11,7 +11,7 @@ const HomeProject = ({ title }) => {
           }}
           whileTap={{ scale: 0.8 }}
           className="text-neutral text-xl  md:inline-flex border-neutral-400"
-          href="https://kainebinch.dev/adminDashboard"
+          href={link}
           rel="noreferrer"
           target="_blank"
         >

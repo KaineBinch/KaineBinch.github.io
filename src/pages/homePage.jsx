@@ -107,7 +107,11 @@ const HomePage = () => {
             <div data-aos="fade-right">
               <hr className="border-neutral" />
               {projects.map((project, i) => (
-                <HomeProject key={i} title={project.title} />
+                <HomeProject
+                  key={i}
+                  title={project.title}
+                  link={project.link}
+                />
               ))}
             </div>
 

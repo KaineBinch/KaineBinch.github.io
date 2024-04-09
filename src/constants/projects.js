@@ -2,6 +2,7 @@ import DashboardImage from "../assets/projectAssets/dashboard.png"
 import DashboardIcon from "../assets/projectAssets/smallDashboard.png";
 import passGen from "../assets/projectAssets/passwordGenerator.png"
 import pixelArt from "../assets/projectAssets/pixelArt.png"
+import blockRotate from "../assets/projectAssets/blockRotate.png"
 
 export const projects = [
   {
@@ -30,6 +31,15 @@ export const projects = [
     longDesc: "A modifiable grid generator featuring a color wheel for painting and erasing grid elements. This allows you to paint and erase elements, creating unique designs.",
     tags: ["HTML", "Javascript", "CSS"],
     link: "https://kainebinch.dev/Grid-Painter"
+  },
+  {
+    title: "Rotating Blocks",
+    hoverImage: "",
+    iconImage: blockRotate,
+    shortDesc: "A background of grey crosses that, on mouse entry, change to white squares which creates a painting effect.",
+    longDesc: "A background of grey crosses that, on mouse entry, change to white squares which creates a painting effect.",
+    tags: ["HTML", "Javascript", "p5.js"],
+    link: "https://kainebinch.dev/Rotating-Blocks"
   },
 
 ]

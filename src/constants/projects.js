@@ -46,8 +46,8 @@ export const projects = [
     title: "Sorting Algorithms",
     hoverImage: "",
     iconImage: sortAlgorithm,
-    shortDesc: "This webpage delves into sorting algorithms with detailed implementations and visualizations, focusing on computer science and algorithm analysis",
-    longDesc: "This webpage delves into sorting algorithms with detailed implementations and visualizations, focusing on computer science and algorithm analysis",
+    shortDesc: "Sorting algorithms with detailed implementations and visualizations, focusing on algorithm analysis",
+    longDesc: "Sorting algorithms with detailed implementations and visualizations, focusing on algorithm analysis",
     tags: ["HTML", "Javascript", "p5.js"],
     link: "https://kainebinch.dev/Sorting-Algorithms"
   },

@@ -3,6 +3,7 @@ import DashboardIcon from "../assets/projectAssets/smallDashboard.png";
 import passGen from "../assets/projectAssets/passwordGenerator.png"
 import pixelArt from "../assets/projectAssets/pixelArt.png"
 import blockRotate from "../assets/projectAssets/blockRotate.png"
+import sortAlgorithm from "../assets/projectAssets/sortAlgorithms.png"
 
 export const projects = [
   {
@@ -41,5 +42,13 @@ export const projects = [
     tags: ["HTML", "Javascript", "p5.js"],
     link: "https://kainebinch.dev/Rotating-Blocks"
   },
-
+  {
+    title: "Sorting Algorithms",
+    hoverImage: "",
+    iconImage: sortAlgorithm,
+    shortDesc: "This webpage delves into sorting algorithms with detailed implementations and visualizations, focusing on computer science and algorithm analysis",
+    longDesc: "This webpage delves into sorting algorithms with detailed implementations and visualizations, focusing on computer science and algorithm analysis",
+    tags: ["HTML", "Javascript", "p5.js"],
+    link: "https://kainebinch.dev/Sorting-Algorithms"
+  },
 ]

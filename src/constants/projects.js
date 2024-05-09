@@ -7,15 +7,6 @@ import sortAlgorithm from "../assets/projectAssets/sortAlgorithms.png"
 
 export const projects = [
   {
-    title: "React Admin Dashboard",
-    hoverImage: DashboardImage,
-    iconImage: DashboardIcon,
-    shortDesc: "A versatile tool integrating datasets for comprehensive overviews and centralized data storage.",
-    longDesc: "This project is a versatile tool designed for seamless integration with diverse datasets. It offers users a comprehensive overview of data at a glance while serving as a centralized repository for all related information.",
-    tags: ["react", "tailwind", "data"],
-    link: "https://kainebinch.dev/adminDashboard",
-  },
-  {
     title: "Password Generator",
     hoverImage: "",
     iconImage: passGen,
@@ -32,6 +23,15 @@ export const projects = [
     longDesc: "A modifiable grid generator featuring a color wheel for painting and erasing grid elements. This allows you to paint and erase elements, creating unique designs.",
     tags: ["HTML", "Javascript", "CSS"],
     link: "https://kainebinch.dev/Grid-Painter"
+  },
+  {
+    title: "React Admin Dashboard",
+    hoverImage: DashboardImage,
+    iconImage: DashboardIcon,
+    shortDesc: "A versatile tool integrating datasets for comprehensive overviews and centralized data storage.",
+    longDesc: "This project is a versatile tool designed for seamless integration with diverse datasets. It offers users a comprehensive overview of data at a glance while serving as a centralized repository for all related information.",
+    tags: ["react", "tailwind", "data"],
+    link: "https://kainebinch.dev/adminDashboard",
   },
   {
     title: "Rotating Blocks",
@@ -51,4 +51,5 @@ export const projects = [
     tags: ["HTML", "Javascript", "p5.js"],
     link: "https://kainebinch.dev/Sorting-Algorithms"
   },
+
 ]

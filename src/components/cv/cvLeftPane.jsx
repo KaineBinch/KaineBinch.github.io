@@ -1,5 +1,6 @@
 import { motion as m } from "framer-motion";
 import InfoRow from "../infoRow";
+import ExercismIcon from "../../assets/exercismLogo.png";
 
 const CvLeftPane = () => {
   return (
@@ -32,10 +33,31 @@ const CvLeftPane = () => {
             CONTACT
           </h1>
           <div className="flex flex-col items-center text-[#1c1a73] text-[16px] md:pl-5 lg:pl-0 md:px-0 px-10">
-            <InfoRow icon="fa-solid fa-phone" text="07802 766962" />
-            <InfoRow icon="fa-solid fa-envelope" text="kainebinch@live.com" />
-            <InfoRow icon="fa-solid fa-house" text="Kimberley, Nottingham" />
-            <InfoRow icon="fa-solid fa-globe" text="kainebinch.dev" />
+            <div className="w-full md:hidden flex">
+              <InfoRow
+                icon="fa-solid fa-phone"
+                text="07802 766962"
+                link="tel:07802766962"
+              />
+            </div>
+            <div className="w-full md:flex hidden">
+              <InfoRow icon="fa-solid fa-phone" text="07802 766962" />
+            </div>
+            <InfoRow
+              icon="fa-solid fa-envelope"
+              text="kainebinch@live.com"
+              link="mailto:kainebinch@live.com"
+            />
+            <InfoRow
+              icon="fa-solid fa-house"
+              text="Kimberley, Nottingham"
+              link="https://google.com/maps/place/Kimberley,+Nottingham/@52.9966447,-1.2752485,14.5z/data=!4m6!3m5!1s0x4879ea535219591b:0x92f219209af9e8f5!8m2!3d52.994062!4d-1.253579!16zL20vMDI4Nnli"
+            />
+            <InfoRow
+              icon="fa-solid fa-globe"
+              text="kainebinch.dev"
+              link="https://kainebinch.dev"
+            />
           </div>
         </div>
         <div className="flex flex-col mt-[25px]">
@@ -46,14 +68,22 @@ const CvLeftPane = () => {
             <InfoRow
               icon="fa-brands fa-github"
               text={["kainebinch", "GitHub"]}
+              link="https://github.com/KaineBinch"
             />
             <InfoRow
               icon="fa-brands fa-linkedin"
               text={["kainebinch", "LinkedIn"]}
+              link="https://linkedin.com/in/kainebinch"
             />
             <InfoRow
               icon="fa-brands fa-hackerrank"
               text={["kainebinch", "HackerRank"]}
+              link="https://hackerrank.com/profile/kainebinch"
+            />
+            <InfoRow
+              iconOverride={ExercismIcon}
+              text={["kainebinch", "Exercism"]}
+              link="https://exercism.org/profiles/KaineBinch"
             />
           </div>
         </div>
@@ -61,7 +91,7 @@ const CvLeftPane = () => {
           <h1 className="text-center text-xl font-bold text-white bg-[#1c1a73]">
             EDUCATION
           </h1>
-          <div className="flex flex-col items-center text-[#1c1a73] text-[16px] md:pl-5 lg:pl-0 md:px-0 px-10">
+          <div className="flex flex-col items-center text-[#1c1a73] text-[16px] md:pl-5 lg:pl-0 md:px-0 px-10 mb-[25px]">
             <InfoRow
               title="Higher Education:"
               text="Notts County FC 2013-2015"

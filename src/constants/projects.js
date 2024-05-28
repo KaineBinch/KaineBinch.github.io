@@ -4,6 +4,7 @@ import passGen from "../assets/projectAssets/passwordGenerator.png"
 import pixelArt from "../assets/projectAssets/pixelArt.png"
 import blockRotate from "../assets/projectAssets/blockRotate.png"
 import sortAlgorithm from "../assets/projectAssets/sortAlgorithms.png"
+import calculator from "../assets/projectAssets/calculator.png"
 
 export const projects = [
   {
@@ -41,6 +42,15 @@ export const projects = [
     longDesc: "A background of grey crosses that, on mouse entry, change to white squares which creates a painting effect.",
     tags: ["HTML", "Javascript", "p5.js"],
     link: "https://kainebinch.dev/Rotating-Blocks"
+  },
+  {
+    title: "Calculator",
+    hoverImage: "",
+    iconImage: calculator,
+    shortDesc: "An easy-to-use calculator designed to perform fundamental arithmetic tasks with simplicity and precision ",
+    longDesc: "",
+    tags: ["HTML", "Javascript", "p5.js"],
+    link: "https://kainebinch.dev/Calculator"
   },
   {
     title: "Sorting Algorithms",

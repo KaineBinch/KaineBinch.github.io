@@ -47,8 +47,8 @@ export const projects = [
     title: "Calculator",
     hoverImage: "",
     iconImage: calculator,
-    shortDesc: "An easy-to-use calculator designed to perform fundamental arithmetic tasks with simplicity and precision ",
-    longDesc: "",
+    shortDesc: "An easy-to-use calculator designed to perform fundamental arithmetic tasks with simplicity and precision.",
+    longDesc: "An easy-to-use calculator designed to perform fundamental arithmetic tasks with simplicity and precision.",
     tags: ["HTML", "Javascript", "p5.js"],
     link: "https://kainebinch.dev/Calculator"
   },

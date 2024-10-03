@@ -5,7 +5,7 @@ const Navbar = () => {
   const location = useLocation().pathname;
   const links = [
     { title: "Home", to: "/" },
-    { title: "About", to: "/about" },
+    { title: "Work", to: "/work" },
     { title: "Projects", to: "/projects" },
   ];
   const loseActiveFocus = () => {

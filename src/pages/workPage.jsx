@@ -1,10 +1,10 @@
 import image from "../assets/kaineRiverWeb.jpg";
 import mobileImage from "../assets/kaineRiverMobile.jpg";
-import MyFace from "../components/myFace";
+import MyFace from "../components/cv/myFace";
 import { useState } from "react";
-import Jobs from "../components/jobs";
+import Jobs from "../components/cv/jobs";
 
-const AboutPage = () => {
+const WorkPage = () => {
   const [boxOpacity, setBoxOpacity] = useState(0);
   const [avatarOpacity, setAvatarOpacity] = useState(0);
   const [leftTextOpacity, setLeftTextOpacity] = useState(0);
@@ -110,4 +110,4 @@ const AboutPage = () => {
     </div>
   );
 };
-export default AboutPage;
+export default WorkPage;

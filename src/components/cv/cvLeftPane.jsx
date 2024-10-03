@@ -1,5 +1,5 @@
 import { motion as m } from "framer-motion";
-import InfoRow from "../infoRow";
+import InfoRow from "./infoRow";
 import ExercismIcon from "../../assets/exercismLogo.png";
 
 const CvLeftPane = () => {

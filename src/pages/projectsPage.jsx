@@ -1,19 +1,11 @@
 import ProjectCard from "../components/projectCard";
 import { projects } from "../constants/projects";
-import image from "../assets/bgImage.jpg";
 import { motion as m } from "framer-motion";
 
 const Projects = () => {
   return (
     <>
-      <div
-        className="fixed top-0 h-screen w-screen z-[-1] "
-        style={{
-          backgroundImage: `url(${image})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
-      />
+      <div className="fixed bg-secondary top-0 h-screen w-screen z-[-1] " />
       <m.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

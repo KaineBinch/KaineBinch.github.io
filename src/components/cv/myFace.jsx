@@ -1,4 +1,4 @@
-import headImage from "../assets/kaineHead.jpg";
+import headImage from "../../assets/kaineHead.jpg";
 
 const MyFace = ({ children, size = 140 }) => {
   return (

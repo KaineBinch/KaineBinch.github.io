@@ -1,4 +1,4 @@
-import { jobs } from "../constants/jobs";
+import { jobs } from "../../constants/jobs";
 
 const Jobs = () => {
   return (

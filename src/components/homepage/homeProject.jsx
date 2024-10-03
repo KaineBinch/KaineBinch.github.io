@@ -7,7 +7,7 @@ const HomeProject = ({ title, link }) => {
         <m.a
           whileHover={{
             originX: 0,
-            scale: 1.1,
+            scale: 1.2,
           }}
           whileTap={{ scale: 0.8 }}
           className="text-neutral text-xl  md:inline-flex border-neutral-400"

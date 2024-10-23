@@ -93,7 +93,7 @@ const HomePage = () => {
           <h1 className="text-5xl font-bold mb-5">About me</h1>
           <a
             className="btn btn-primary text-neutral-200 hidden md:inline-flex"
-            href="/#/about"
+            href="/#/work"
           >
             Learn more
           </a>

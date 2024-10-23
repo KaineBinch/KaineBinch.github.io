@@ -22,7 +22,7 @@ const Jobs = () => {
             </div>
 
             {index % 2 === 0 ? (
-              <div className="timeline-start md:text-end mb-3 text-start pl-0 md:pl-5 md:pr-0 pr-10 ">
+              <div className="timeline-start md:text-end mb-5 text-start pl-0 md:pl-5 md:pr-0 pr-10 ">
                 <time className="font-mono italic">{job.dates}</time>
                 <div className="text-lg font-black">{job.jobTitle}</div>
                 <div className="text-justify">{job.fullDesc}</div>

@@ -7,3 +7,55 @@
   padding: 0;
   text-align: center;
 }
+
+/* Print styles */
+@media print {
+  /* Custom margin classes */
+  .print-mt-5 {
+    margin-top: 1.25rem; /* 20px */
+  }
+
+  .print-mt-10 {
+    margin-top: 2.5rem; /* 40px */
+  }
+
+  .print-mt-15 {
+    margin-top: 3.75rem; /* 60px */
+  }
+
+  .print-mt-20 {
+    margin-top: 5rem; /* 80px */
+  }
+
+  .print-mt-25 {
+    margin-top: 6.25rem; /* 100px */
+  }
+
+  .print-mt-30 {
+    margin-top: 7.5rem; /* 120px */
+  }
+
+  .print-mb-5 {
+    margin-bottom: 1.25rem; /* 20px */
+  }
+
+  .print-mb-10 {
+    margin-bottom: 2.5rem; /* 40px */
+  }
+
+  .print-mb-15 {
+    margin-bottom: 3.75rem; /* 60px */
+  }
+
+  .print-mb-20 {
+    margin-bottom: 5rem; /* 80px */
+  }
+
+  .print-mb-25 {
+    margin-bottom: 6.25rem; /* 100px */
+  }
+
+  .print-mb-30 {
+    margin-bottom: 7.5rem; /* 120px */
+  }
+}

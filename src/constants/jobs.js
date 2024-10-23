@@ -68,6 +68,6 @@ export const jobs = [
       "Effectively managed conflicts and difficult situations by utilizing communication skills, service knowledge, and de-escalation techniques.",
     ],
     fullDesc: "I coordinated workload assignments for a team of 40+ Care Workers, prioritizing citizen safety and efficient service delivery. Managing daily coordination for over 50 service users, including precise medication schedules, demanded meticulous attention to detail. Within the team, I fostered open communication and problem-solving through regular meetings. Handling diverse telephone inquiries regarding citizen care packages and other concerns, I ensured effective communication with colleagues, healthcare professionals, and the public. Moreover, I adeptly managed conflicts and difficult situations using communication skills, service knowledge, and de-escalation techniques.",
-    dates: "Mar 2015 - Jul 1015",
+    dates: "Mar 2015 - Jul 2015",
   },
 ]

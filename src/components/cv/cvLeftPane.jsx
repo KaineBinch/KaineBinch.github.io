@@ -22,14 +22,66 @@ const CvLeftPane = () => {
             About Me
           </h1>
           <p className="text-[#1c1a73] text-left md:pl-5 lg:pl-0 md:px-0 px-10 mb-8">
-            Experienced Team Manager in the social care sector, adept at
-            fostering teamwork and empowering others. I{"’"}m currently teaching
-            myself JavaScript and React. Whilst maintaining a passion for
-            personal growth, with a focus on integrating my leadership skills.
+            Experienced Team Manager with a proven track record in the social
+            care sector, specializing in fostering teamwork, empowering teams,
+            and driving performance. Currently expanding my skill set into
+            software development, with a focus on modern programming languages
+            and frameworks. Passionate about continuous personal growth, I am
+            eager to integrate my strong leadership and management skills into
+            the tech industry, bringing a commitment to learning, innovation,
+            and adaptability across various technologies.
           </p>
         </div>
         <div className="flex flex-col">
           <h1 className="text-center text-xl font-bold text-white bg-[#1c1a73]">
+            TECHNICAL SKILLS
+          </h1>
+          <div className="flex flex-col items-center text-[#1c1a73] text-[16px] md:pl-5 lg:pl-0 md:px-0 px-10">
+            <InfoRow
+              title="Launguages"
+              text="JavaScript, TypeScript (Learning), Go (Learning), SQL (Learning) HTML, CSS, Markdown"
+              isHeader={true}
+            />
+            <InfoRow
+              title="Frameworks/ Libraries"
+              text="React, Node.js, p5.js, Tailwind CSS, Framer Motion, GSAP"
+              isHeader={true}
+            />
+            <InfoRow
+              title="Tools/Tech"
+              text="Git & Github, Visual Studio, Figma, REST API's, JSON, Yarn/npm, Prettier, Postman"
+              isHeader={true}
+            />
+            <InfoRow
+              title="Version Control"
+              text="Git (proficient with GitHub workflows, branches, pull requests)"
+              isHeader={true}
+            />
+            <InfoRow
+              title="Databases/ CMS"
+              text="Strapi Headless CMS, PostreSQL(Learning)"
+              isHeader={true}
+            />
+            <InfoRow
+              title="Deployment/ Hosting"
+              text="Github Pages, Hostinger"
+              isHeader={true}
+            />
+            <InfoRow
+              title="UI/UX Design"
+              text="Figma, Pixso (excellent proficiency in wireframing, prototyping), Material UI, DasiyUI"
+              isHeader={true}
+            />
+            <InfoRow title="Testing/ Debugging" text="Jest" isHeader={true} />
+            <InfoRow
+              title="Collaboration Tools"
+              text="Trello, MS Teams, Zoom, Confluence"
+              isHeader={true}
+            />
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <h1 className="text-center text-xl font-bold text-white bg-[#1c1a73] mt-[25px]">
             CONTACT
           </h1>
           <div className="flex flex-col items-center text-[#1c1a73] text-[16px] md:pl-5 lg:pl-0 md:px-0 px-10">

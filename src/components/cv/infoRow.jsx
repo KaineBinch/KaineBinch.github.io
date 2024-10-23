@@ -18,7 +18,7 @@ const InfoRow = ({
           ) : iconOverride ? (
             <img src={iconOverride} className="h-[21.5px]" />
           ) : (
-            <p className={`text-start ${isHeader ? "font-bold" : ""}`}>
+            <p className={`text-start ${isHeader ? "font-bold pr-5" : ""}`}>
               {title}
             </p>
           )}

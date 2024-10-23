@@ -5,7 +5,7 @@ import { motion as m } from "framer-motion";
 const Projects = () => {
   return (
     <>
-      <div className="fixed bg-secondary top-0 h-screen w-screen z-[-1] " />
+      <div className="fixed bg-base-100 top-0 h-screen w-screen z-[-1] " />
       <m.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

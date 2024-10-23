@@ -103,10 +103,18 @@ const HomePage = () => {
           data-aos="fade-left"
         >
           <p>
-            Right now I am focusing on mastering javascript. This website has
-            been built with react, I have also used tailwind css, framer motion
-            and daisyUI for various elements. However, I do aspire to broaden my
-            skills by learning a diverse range of programming languages.
+            I’m a passionate software developer with a knack for turning ideas
+            into reality. My journey began with self-taught programming, and I
+            specialize in building user-friendly applications using JavaScript,
+            React, and Tailwind CSS.
+            <br />
+            I thrive on solving complex problems and enjoy collaborating with
+            others to create innovative solutions. Constantly exploring new
+            technologies, I aim to stay at the forefront of the ever-evolving
+            tech landscape.
+            <br />
+            When I’m not coding, you’ll find me experimenting with design or
+            diving into the latest programming trends.
           </p>
           <a
             className="btn btn-primary md:hidden mt-5 self-center"

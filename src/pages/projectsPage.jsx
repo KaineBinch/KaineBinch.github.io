@@ -13,9 +13,19 @@ const Projects = () => {
       >
         <div className="pt-28 mb-10 text-6xl font-bold">Projects</div>
         <p className="font-semibold px-10 mb-12">
-          Welcome to my projects page. Here, you will find a list of projects I
-          {"'"}m currently working on. From coding experiments to creative
-          endeavors, have a look and see what I{"'"}m up to!
+          Welcome to my projects page! Here, you can explore a collection of my
+          current projects, showcasing everything from coding experiments to
+          creative endeavors. I invite you to dive in and see what I{"'"}m
+          working on. For more of my work, feel free to visit
+          <a
+            className="text-info"
+            href="https://github.com/KaineBinch"
+            rel="noreferrer"
+            target="_blank"
+          >
+            {" "}
+            my Github profile
+          </a>
         </p>
       </m.div>
       <m.div

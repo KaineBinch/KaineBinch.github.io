@@ -1,9 +1,9 @@
 const ProjectCard = ({ title, shortDesc, longDesc, tags, link, iconImage }) => {
   return (
-    <div className="hover:shadow-[0px_0px_20px_10px_rgba(0,123,255,0.8)] transition-shadow duration-300 ease-in-out rounded-lg">
-      <div className="card bg-base-300 bg-opacity-10 backdrop-blur-md shadow-xl">
-        <div className="w-400px h-150px min-w-[300px] min-h-[150px]">
-          <img className="rounded-t-lg" src={iconImage} alt={title} />
+    <div className="hover:shadow-[0px_0px_20px_10px_theme('colors.primary')] transition-shadow duration-300 ease-in-out rounded-lg">
+      <div className="card bg-opacity-30 backdrop-blur-md shadow-xl border border-gray-300 hover:border-none">
+        <div className="w-400px h-250px min-w-[300px] min-h-[150px] overflow-hidden">
+          <img className="rounded-t-md" src={iconImage} alt={title} />
         </div>
         <div className="card-body h-[300px]">
           <h2 className="card-title">{title}</h2>

@@ -1,5 +1,31 @@
 export const jobs = [
   {
+    jobTitle: "Junior Full-Stack Software Engineer",
+    bulletDesc: [
+      "Maintained an adaptable and proactive approach, collaborating with teams to drive efficiency and deliver high-quality software solutions.",
+      "Collaborated with cross-functional teams to define project requirements, ensuring alignment between development, design, and business goals.",
+      "Developed and maintained web applications using Vue.js, PHP, and TypeScript, ensuring scalability and performance.",
+      "Worked with PostgreSQL to design, optimize, and manage databases, implementing best practices for data integrity and efficiency.",
+      "Containerized and deployed applications using Docker, leveraging AWS services for cloud-based infrastructure and hosting.",
+      "Assisted in troubleshooting, debugging, and optimizing legacy systems while contributing to the development of new features.",
+      "Supported team members by sharing knowledge, participating in code reviews, and assisting with onboarding when required.",
+    ],
+    fullDesc: "As a Junior Full-Stack Software Engineer, I maintain an adaptable and proactive approach, collaborating with cross-functional teams to drive efficiency and deliver high-quality software solutions. I work closely with development, design, and business teams to define project requirements and ensure alignment with organizational goals. My technical responsibilities include developing and maintaining web applications using Vue.js, PHP, and TypeScript, focusing on scalability and performance optimization. I design, optimize, and manage PostgreSQL databases, implementing best practices for data integrity and efficiency. Additionally, I containerize and deploy applications using Docker while leveraging AWS services for cloud-based infrastructure and hosting. I actively assist in troubleshooting, debugging, and optimizing legacy systems while contributing to new feature development. Supporting team collaboration, I share knowledge, participate in code reviews, and assist with onboarding processes when required.",
+    dates: "Jan 2025 - Current",
+  },
+  {
+    jobTitle: "Contracts Manager",
+    bulletDesc: [
+      "Managed procurement processes and supplier relationships to ensure value for money and compliance with public sector regulations.",
+      "Negotiated, reviewed, and maintained contracts across various council services, ensuring legal and operational alignment.",
+      "Monitored supplier performance, mitigated risks, and implemented strategies to improve service delivery and cost efficiency.",
+      "Provided expert advice to internal teams on contract management, procurement policies, and regulatory compliance.",
+      "Led dispute resolution, contract renegotiations, and service improvements to enhance operational effectiveness and community impact.",
+    ],
+    fullDesc: "As a Contracts Manager, I managed comprehensive procurement processes and supplier relationships, ensuring value for money and strict compliance with public sector regulations. I negotiated, reviewed, and maintained contracts across various council services, ensuring both legal and operational alignment with organizational objectives. My responsibilities included monitoring supplier performance, mitigating risks, and implementing strategic improvements to enhance service delivery and cost efficiency. I provided expert guidance to internal teams on contract management best practices, procurement policies, and regulatory compliance requirements. Additionally, I led dispute resolution processes, contract renegotiations, and service improvement initiatives to enhance operational effectiveness and maximize community impact.",
+    dates: "Aug 2024 - Jan 2025",
+  },
+  {
     jobTitle: "Care Team Leader (Project Lead)",
     bulletDesc: [
       "I exclusively developed and spearheaded a new Spot Contracting framework for homecare agencies, which encompassed auditing, inspection, and negotiation processes. This initiative significantly reduced wait times within Nottingham City.",
@@ -15,7 +41,7 @@ export const jobs = [
 
     ],
     fullDesc: "I led the development of a Spot Contracting framework for homecare agencies in Nottingham City, streamlining auditing, inspection, and negotiation processes to significantly reduce wait times. Building positive relationships internally and externally, I negotiated hourly rates with care agencies, balancing council standards with industry norms. Implementing an efficient bidding process for external providers, I ensured compliance with data protection regulations. Collaboration was key; I worked closely with staff to continuously improve systems. Adapting my communication style, I effectively engaged diverse audiences, both internally and externally. These efforts streamlined operations, fostered collaboration, and promoted transparent and fair practices, ultimately enhancing care service quality and efficiency.",
-    dates: "Aug 2022 - Current",
+    dates: "Aug 2022 - Sep 2024",
   },
   {
     jobTitle: "Care Team Leader (Homecare Manager)",

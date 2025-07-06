@@ -1,6 +1,7 @@
-import mobileImage from "../../assets/middlePicture.png";
-import image from "../../assets/cvHeadPicture.jpg";
-import { motion as m } from "framer-motion";
+import mobileImage from "../../assets/middlePicture.png"
+import image from "../../assets/cvHeadPicture.jpg"
+import { motion as m } from "framer-motion"
+import { personalInfo } from "../../constants/cvData"
 
 const CvHeader = () => {
   return (
@@ -42,9 +43,8 @@ const CvHeader = () => {
                   ease: "easeInOut",
                 }}
                 exit={{ opacity: 0, x: 6, y: 10 }}
-                className="text-6xl lg:text-8xl font-extrabold"
-              >
-                KAINE
+                className="text-6xl lg:text-8xl font-extrabold">
+                {personalInfo.name.first}
               </m.div>
               <m.div
                 initial={{ opacity: 0, x: 20, y: -10 }}
@@ -55,9 +55,8 @@ const CvHeader = () => {
                   ease: "easeInOut",
                 }}
                 exit={{ opacity: 0, x: 6, y: 10 }}
-                className="pl-[50px] lg:pl-[100px] pt-2 text-6xl lg:text-8xl font-extrabold"
-              >
-                BINCH
+                className="pl-[50px] lg:pl-[100px] pt-2 text-6xl lg:text-8xl font-extrabold">
+                {personalInfo.name.last}
               </m.div>
             </div>
             <m.div
@@ -69,9 +68,8 @@ const CvHeader = () => {
                 ease: "easeInOut",
               }}
               exit={{ opacity: 0, x: 6, y: 10 }}
-              className="md:hidden text-4xl font-extrabold"
-            >
-              KAINE BINCH
+              className="md:hidden text-4xl font-extrabold">
+              {personalInfo.name.full}
             </m.div>
             <m.div
               initial={{ opacity: 0, x: 20, y: -10 }}
@@ -82,15 +80,14 @@ const CvHeader = () => {
                 ease: "easeInOut",
               }}
               exit={{ opacity: 0, x: 6, y: 10 }}
-              className="md:pl-[100px] lg:pl-[130px] pt-2 md:text-md lg:text-xl text-sm "
-            >
-              Software Engineer
+              className="md:pl-[100px] lg:pl-[130px] pt-2 md:text-md lg:text-xl text-sm ">
+              {personalInfo.title}
             </m.div>
           </div>
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default CvHeader;
+export default CvHeader

@@ -1,19 +1,19 @@
-import { useEffect, useRef, useState } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import SplitText from "../utils/splitText";
-import { motion as m } from "framer-motion";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import HomeProject from "../components/homepage/homeProject";
-import { projects } from "../constants/projects";
+import { useEffect, useRef, useState } from "react"
+import gsap from "gsap"
+import { useGSAP } from "@gsap/react"
+import SplitText from "../utils/splitText"
+import { motion as m } from "framer-motion"
+import AOS from "aos"
+import "aos/dist/aos.css"
+import HomeProject from "../components/homepage/homeProject"
+import { projects } from "../constants/projects"
 
 const styles = {
   clipPath: { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" },
-};
+}
 
 const HomePage = () => {
-  const container = useRef();
+  const container = useRef()
 
   useGSAP(
     () => {
@@ -22,21 +22,21 @@ const HomePage = () => {
         stagger: 0.1,
         delay: 0.3,
         duration: 0.6,
-      });
+      })
     },
-    { scope: container }
-  );
+    { scope: container },
+  )
 
   useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
+    AOS.init({ duration: 1000 })
+  }, [])
 
   const ProjectList = ({ projects }) => {
-    const [visibleProjects, setVisibleProjects] = useState(3);
+    const [visibleProjects, setVisibleProjects] = useState(3)
 
     const handleSeeMore = () => {
-      setVisibleProjects((prev) => prev + 5);
-    };
+      setVisibleProjects((prev) => prev + 5)
+    }
 
     return (
       <>
@@ -52,33 +52,31 @@ const HomePage = () => {
               style={{
                 fontWeight: "bold",
                 fontSize: "16px",
-              }}
-            >
+              }}>
               See More...
             </span>
           )}
         </div>
       </>
-    );
-  };
+    )
+  }
 
   return (
     <div className="overflow-x-hidden">
-      <div className="hero min-h-[92svh] bg-base-100">
+      <div className="hero min-h-[92svh]">
         <div className="hero-content text-center">
           <div className="max-w-full">
             <div className="" style={styles.clipPath} ref={container}>
               {SplitText(
                 "Kaine Binch",
-                "md:text-8xl text-6xl font-bold -translate-y-full"
+                "md:text-8xl text-6xl font-bold -translate-y-full",
               )}
             </div>
             <m.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.8 }}
-              className="py-6"
-            >
+              className="py-6">
               Nottingham based software engineer dedicated to transforming ideas
               into efficient, user-centric solutions. With a fresh perspective
               and a passion for innovation, my portfolio showcases projects that
@@ -93,15 +91,13 @@ const HomePage = () => {
           <h1 className="text-5xl font-bold mb-5">About me</h1>
           <a
             className="btn btn-primary text-neutral-200 hidden md:inline-flex"
-            href="/#/work"
-          >
+            href="/#/work">
             Learn more
           </a>
         </div>
         <div
           className="flex flex-col flex-[2] px-2 text-start text-neutral-200"
-          data-aos="fade-left"
-        >
+          data-aos="fade-left">
           <p>
             I’m a passionate software developer with a knack for turning ideas
             into reality. My journey began with self-taught programming, and I
@@ -118,8 +114,7 @@ const HomePage = () => {
           </p>
           <a
             className="btn btn-primary md:hidden mt-5 self-center"
-            href="/#/about"
-          >
+            href="/#/about">
             Learn more
           </a>
         </div>
@@ -132,8 +127,7 @@ const HomePage = () => {
           </p>
           <a
             className="btn btn-primary text-neutral-200 hidden md:inline-flex"
-            href="/#/projects"
-          >
+            href="/#/projects">
             Explore Projects
           </a>
         </div>
@@ -143,15 +137,14 @@ const HomePage = () => {
           <div data-aos="fade-right">
             <a
               className="btn btn-primary md:hidden mt-5 self-center"
-              href="/#/projects"
-            >
+              href="/#/projects">
               Explore Projects
             </a>
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default HomePage;
+export default HomePage

@@ -1,7 +1,7 @@
 import HomePage from "./homePage";
+import AboutPage from "./aboutPage";
+import ProjectsPage from "./projectsPage";
+import ContactPage from "./contactPage";
 import NotFound from "./notFound";
-import ProjectsPage from "./projectsPage"
-import CvPage from "./CvPage"
-import WorkPage from "./workPage";
 
-export { HomePage, NotFound, ProjectsPage, CvPage, WorkPage }
+export { HomePage, AboutPage, ProjectsPage, ContactPage, NotFound };

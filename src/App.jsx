@@ -6,6 +6,7 @@ import {
   AboutPage,
   ProjectsPage,
   ContactPage,
+  CvPage,
   NotFound,
 } from "./pages"
 import Navbar from "./components/navbar"
@@ -25,6 +26,7 @@ function App() {
           <Route path={appRoutes.about}    element={<AboutPage />} />
           <Route path={appRoutes.projects} element={<ProjectsPage />} />
           <Route path={appRoutes.contact}  element={<ContactPage />} />
+          <Route path={appRoutes.cv}       element={<CvPage />} />
           <Route path={appRoutes.notFound} element={<NotFound />} />
         </Routes>
       </AnimatePresence>

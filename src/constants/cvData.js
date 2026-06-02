@@ -46,7 +46,7 @@ export const contactInfo = {
     link: "mailto:kainebinch@live.com"
   },
   location: {
-    address: "Kimberley, Nottingham",
+    address: "Nottinghamshire",
     link: "https://google.com/maps/place/Kimberley,+Nottingham/@52.9966447,-1.2752485,14.5z/data=!4m6!3m5!1s0x4879ea535219591b:0x92f219209af9e8f5!8m2!3d52.994062!4d-1.253579!16zL20vMDI4Nnli"
   },
   website: {

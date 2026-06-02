@@ -104,17 +104,16 @@ const GlassNavbar = ({ baseColor = "rgba(255, 255, 255)" }) => {
 
           <div className="w-px h-5 bg-white/30 mx-1" />
 
-          <motion.a
-            href="/resume.pdf"
-            download
-            target="_blank"
-            rel="noopener noreferrer"
+          <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            className="text-sm font-semibold px-4 py-1.5 rounded-full bg-primary text-bg whitespace-nowrap focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
-            Resume
-          </motion.a>
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}>
+            <Link
+              to="/cv"
+              className="text-sm font-semibold px-4 py-1.5 rounded-full bg-primary text-bg whitespace-nowrap block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+              Resume
+            </Link>
+          </motion.div>
         </motion.nav>
       </div>
 
@@ -182,15 +181,12 @@ const GlassNavbar = ({ baseColor = "rgba(255, 255, 255)" }) => {
                         closed: { opacity: 0, y: -5 },
                       }}
                       transition={{ type: "spring", stiffness: 300, damping: 24 }}>
-                      <a
-                        href="/resume.pdf"
-                        download
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <Link
+                        to="/cv"
                         onClick={() => setMobileMenuOpen(false)}
                         className="block px-4 py-2.5 rounded-xl text-sm font-semibold text-bg bg-primary hover:brightness-110 transition-all duration-200 text-center mt-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-primary">
                         Resume
-                      </a>
+                      </Link>
                     </motion.div>
                   </motion.div>
                 </nav>

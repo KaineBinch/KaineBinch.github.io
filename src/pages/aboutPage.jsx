@@ -21,9 +21,9 @@ const techStack = [
   {
     bgIcon: FaReact,
     icon: FaReact,
-    title: "React Ecosystem",
+    title: "Frontend Ecosystem",
     desc: "Building performant, component-driven UIs with the tools the industry relies on.",
-    tags: ["Next.js", "Vue.js", "React.js"],
+    tags: ["React.js", "Next.js", "Vue.js"],
   },
   {
     bgIcon: SiTypescript,
@@ -87,7 +87,7 @@ const AboutPage = () => (
 
           {/* Heading + image — always side by side, image centred to heading */}
           <motion.div
-            className="grid grid-cols-[60%_40%] items-center"
+            className="grid grid-cols-[3fr_2fr] items-center"
             variants={fadeIn}
             initial="hidden"
             whileInView="show"

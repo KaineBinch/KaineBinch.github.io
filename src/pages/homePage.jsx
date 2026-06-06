@@ -24,7 +24,10 @@ const HomePage = () => {
     try {
       const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify(formData),
       })
       if (res.ok) {
@@ -42,9 +45,15 @@ const HomePage = () => {
     <motion.div {...pageTransition}>
       <Helmet>
         <title>Kaine Binch | Software Engineer</title>
-        <meta name="description" content="Nottingham based software engineer building fast, user-focused applications with React, TypeScript, and modern full-stack tooling." />
+        <meta
+          name="description"
+          content="Nottingham based software engineer building fast, user-focused applications with React, TypeScript, and modern full-stack tooling."
+        />
         <meta property="og:title" content="Kaine Binch | Software Engineer" />
-        <meta property="og:description" content="Nottingham based software engineer building fast, user-focused applications with React, TypeScript, and modern full-stack tooling." />
+        <meta
+          property="og:description"
+          content="Nottingham based software engineer building fast, user-focused applications with React, TypeScript, and modern full-stack tooling."
+        />
         <meta property="og:image" content="/images/profile/kaine.webp" />
         <meta property="og:type" content="website" />
       </Helmet>
@@ -53,14 +62,18 @@ const HomePage = () => {
       <section className="pt-24 lg:pt-32 pb-6 lg:pb-12">
         <Container className="w-full">
           <div className="flex flex-col gap-10 md:gap-3">
-            <motion.div variants={fadeIn} initial="hidden" whileInView="show" viewport={{ once: true }}>
+            <motion.div
+              variants={fadeIn}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}>
               <p className="text-label uppercase tracking-widest text-text-2 -mb-10">
                 Software Engineer &amp; Developer
               </p>
             </motion.div>
 
             <motion.div
-              className="grid grid-cols-[60%_40%] items-center"
+              className="grid grid-cols-[3fr_2fr] items-center"
               variants={fadeIn}
               initial="hidden"
               whileInView="show"
@@ -86,14 +99,21 @@ const HomePage = () => {
               </div>
             </motion.div>
 
-            <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}>
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}>
               <p className="text-text-2 text-lg mb-8 max-w-md leading-relaxed">
-                Nottingham based developer building fast, user-focused applications
-                with React, TypeScript, and modern full-stack tooling.
+                Nottingham based developer building fast, user-focused
+                applications with React, TypeScript, and modern full-stack
+                tooling.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button href="/#/projects">View My Work</Button>
-                <Button variant="secondary" href="/#/about">About Me</Button>
+                <Button variant="secondary" href="/#/about">
+                  About Me
+                </Button>
               </div>
             </motion.div>
           </div>
@@ -121,7 +141,7 @@ const HomePage = () => {
       {/* ── Desktop: Projects left | About + Contact right ── */}
       <Container className="hidden lg:block py-8 pb-16">
         <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-3 h-full">
             <ProjectsGrid />
           </div>
           <div className="lg:col-span-2 flex flex-col gap-12">

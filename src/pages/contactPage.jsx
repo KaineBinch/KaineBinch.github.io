@@ -1,7 +1,8 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Helmet } from "react-helmet-async"
-import { FaGithub, FaLinkedin, FaHackerrank } from "react-icons/fa"
+import { FaGithub, FaLinkedin } from "react-icons/fa"
+import { FaHackerrank } from "react-icons/fa6"
 import { SiExercism } from "react-icons/si"
 import { HiLocationMarker } from "react-icons/hi"
 import { MdEmail } from "react-icons/md"
@@ -174,16 +175,16 @@ const ContactPage = () => {
                 <p className="text-text-1 text-sm font-semibold mb-3">
                   Socials
                 </p>
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-2">
                   {socials.map(({ icon: Icon, label, href }) => (
                     <a
                       key={label}
                       href={href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label={label}
-                      className="text-text-2 hover:text-primary transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
-                      <Icon size={18} />
+                      className="flex items-center gap-2 text-text-2 hover:text-primary transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+                      <Icon size={16} className="flex-shrink-0" />
+                      <span className="text-xs truncate">{label}</span>
                     </a>
                   ))}
                 </div>
@@ -205,16 +206,16 @@ const ContactPage = () => {
 
           {/* Right column — form */}
           <motion.div
-            className="lg:col-span-3"
+            className="lg:col-span-3 h-full"
             variants={fadeUp}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}>
-            <Card className="p-6">
+            <Card className="p-6 h-full flex flex-col">
               <h2 className="text-text-1 font-semibold text-xl mb-4">
                 Send a Message
               </h2>
-              <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+              <form onSubmit={handleSubmit} className="flex flex-col gap-3 flex-1">
                 <div className="flex flex-col gap-1">
                   <label
                     htmlFor="contact-name"
@@ -278,7 +279,7 @@ const ContactPage = () => {
                   </select>
                 </div>
 
-                <div className="flex flex-col gap-1">
+                <div className="flex flex-col gap-1 flex-1">
                   <label
                     htmlFor="contact-message"
                     className="text-xs text-text-2 font-medium">
@@ -288,8 +289,8 @@ const ContactPage = () => {
                     id="contact-message"
                     multiline
                     name="message"
+                    className="flex-1"
                     placeholder="Tell me about your project..."
-                    rows={4}
                     value={formData.message}
                     onChange={handleChange}
                     required

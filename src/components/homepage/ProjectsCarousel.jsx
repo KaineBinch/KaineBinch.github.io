@@ -23,7 +23,7 @@ const ProjectsCarousel = () => (
     {/* Cards bleed to the right edge; left padding matches Container's px-6 lg:px-8 */}
     <div className="overflow-x-auto">
       <div className="flex gap-4 snap-x snap-mandatory scroll-smooth pb-4 px-6 lg:px-8">
-        {projects.slice(0, 3).map((project) => (
+        {projects.slice(0, 6).map((project) => (
           <div
             key={project.title}
             className="snap-start flex-shrink-0 w-[78vw] max-w-[300px]">

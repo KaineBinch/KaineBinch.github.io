@@ -1,5 +1,4 @@
 import Card from "../ui/Card"
-import Tag from "../ui/Tag"
 
 const FeaturedProjectCard = ({ project }) => (
   <Card className="overflow-hidden group hover:border-white/20 transition-colors duration-300 h-full flex flex-col">
@@ -11,9 +10,6 @@ const FeaturedProjectCard = ({ project }) => (
       />
     </div>
     <div className="p-4 flex flex-col flex-1">
-      <div className="flex flex-wrap gap-2 mb-2">
-        {project.tags.map((tag) => <Tag key={tag}>{tag}</Tag>)}
-      </div>
       <h3 className="text-text-1 font-semibold text-base mb-1">{project.title}</h3>
       <p className="text-text-2 text-xs mb-3 leading-relaxed flex-1">{project.shortDesc}</p>
       <a

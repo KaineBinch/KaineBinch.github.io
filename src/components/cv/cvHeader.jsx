@@ -1,5 +1,5 @@
 import mobileImage from "../../assets/middlePicture.png"
-import image from "../../assets/cvHeadPicture.jpg"
+import image from "../../assets/cvHeadPictureNew.png"
 import { motion as m } from "framer-motion"
 import { personalInfo } from "../../constants/cvData"
 

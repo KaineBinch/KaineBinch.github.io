@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Helmet } from "react-helmet-async"
-import kaineHead from "../assets/kaineHead.jpg"
+import kaineHead from "../assets/kaineHeadNewNew.png"
 import Button from "../components/ui/Button"
 import Container from "../components/layout/Container"
 import { pageTransition, fadeUp, fadeIn } from "../constants/motionVariants"

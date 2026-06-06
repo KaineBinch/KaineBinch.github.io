@@ -144,7 +144,7 @@ const HomePage = () => {
           <div className="lg:col-span-3 h-full">
             <ProjectsGrid />
           </div>
-          <div className="lg:col-span-2 flex flex-col gap-12">
+          <div className="lg:col-span-2 flex flex-col gap-[4.5rem]">
             <AboutBlurb />
             <ContactForm
               formData={formData}

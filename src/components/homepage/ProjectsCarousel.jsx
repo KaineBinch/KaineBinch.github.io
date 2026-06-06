@@ -8,8 +8,14 @@ import FeaturedProjectCard from "./FeaturedProjectCard"
 const ProjectsCarousel = () => (
   <div className="py-8">
     <Container>
-      <motion.div variants={fadeIn} initial="hidden" whileInView="show" viewport={{ once: true }}>
-        <p className="text-label uppercase tracking-widest text-text-2 mb-2">Selected Work</p>
+      <motion.div
+        variants={fadeIn}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}>
+        <p className="text-label uppercase tracking-widest text-text-2 mb-2">
+          Selected Work
+        </p>
         <h2 className="text-section text-text-1 mb-6">Featured Projects</h2>
       </motion.div>
     </Container>
@@ -18,15 +24,20 @@ const ProjectsCarousel = () => (
     <div className="overflow-x-auto">
       <div className="flex gap-4 snap-x snap-mandatory scroll-smooth pb-4 px-6 lg:px-8">
         {projects.slice(0, 3).map((project) => (
-          <div key={project.title} className="snap-start flex-shrink-0 w-[78vw] max-w-[300px]">
+          <div
+            key={project.title}
+            className="snap-start flex-shrink-0 w-[78vw] max-w-[300px]">
             <FeaturedProjectCard project={project} />
           </div>
         ))}
+        <div className="flex-shrink-0 w-2 lg:w-4" aria-hidden="true" />
       </div>
     </div>
 
     <Container className="mt-6">
-      <Button variant="secondary" href="/#/projects">View All Projects →</Button>
+      <Button variant="secondary" href="/#/projects">
+        View All Projects →
+      </Button>
     </Container>
   </div>
 )

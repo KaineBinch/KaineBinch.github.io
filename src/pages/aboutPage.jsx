@@ -85,7 +85,7 @@ const AboutPage = () => (
             </p>
           </motion.div>
 
-          {/* Heading + image — always side by side, image centred to heading */}
+          {/* Heading + image - always side by side, image centred to heading */}
           <motion.div
             className="grid grid-cols-[3fr_2fr] items-center"
             variants={fadeIn}
@@ -114,7 +114,7 @@ const AboutPage = () => (
             </div>
           </motion.div>
 
-          {/* Bio content — full width below the heading row */}
+          {/* Bio content - full width below the heading row */}
           <motion.div
             variants={fadeUp}
             initial="hidden"

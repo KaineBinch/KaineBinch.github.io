@@ -90,12 +90,12 @@ const ContactPage = () => {
         <title>Kaine Binch | Contact</title>
         <meta
           name="description"
-          content="Get in touch with Kaine Binch — available for freelance opportunities and collaborative projects."
+          content="Get in touch with Kaine Binch - available for freelance opportunities and collaborative projects."
         />
         <meta property="og:title" content="Kaine Binch | Contact" />
         <meta
           property="og:description"
-          content="Get in touch with Kaine Binch — available for freelance opportunities and collaborative projects."
+          content="Get in touch with Kaine Binch - available for freelance opportunities and collaborative projects."
         />
         <meta property="og:image" content="/images/profile/kaine.webp" />
         <meta property="og:type" content="website" />
@@ -204,7 +204,7 @@ const ContactPage = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right column — form */}
+          {/* Right column - form */}
           <motion.div
             className="lg:col-span-3 h-full"
             variants={fadeUp}
@@ -215,7 +215,9 @@ const ContactPage = () => {
               <h2 className="text-text-1 font-semibold text-xl mb-4">
                 Send a Message
               </h2>
-              <form onSubmit={handleSubmit} className="flex flex-col gap-3 flex-1">
+              <form
+                onSubmit={handleSubmit}
+                className="flex flex-col gap-3 flex-1">
                 <div className="flex flex-col gap-1">
                   <label
                     htmlFor="contact-name"
@@ -303,7 +305,7 @@ const ContactPage = () => {
 
                 {formStatus === "success" && (
                   <p className="text-green-400 text-sm text-center">
-                    Message sent — I&apos;ll be in touch soon!
+                    Message sent - I&apos;ll be in touch soon!
                   </p>
                 )}
                 {formStatus === "error" && (

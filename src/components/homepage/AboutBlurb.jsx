@@ -14,7 +14,7 @@ const AboutBlurb = () => (
     <p className="text-text-2 leading-relaxed mb-4">
       I&apos;m a self-taught developer from Nottinghamshire. I specialise in
       React and TypeScript, with a background in team management that shapes how
-      I think about building software — collaboratively, clearly, and with the
+      I think about building software - collaboratively, clearly, and with the
       end user always in mind.
     </p>
     <a href="/#/about" className="text-primary text-sm font-medium">

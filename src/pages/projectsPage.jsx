@@ -3,7 +3,12 @@ import { Helmet } from "react-helmet-async"
 import Card from "../components/ui/Card"
 import Tag from "../components/ui/Tag"
 import Container from "../components/layout/Container"
-import { pageTransition, fadeUp, fadeIn, staggerContainer } from "../constants/motionVariants"
+import {
+  pageTransition,
+  fadeUp,
+  fadeIn,
+  staggerContainer,
+} from "../constants/motionVariants"
 import { projects } from "../constants/projects"
 
 const ProjectCard = ({ title, shortDesc, longDesc, tags, iconImage, link }) => (
@@ -17,11 +22,17 @@ const ProjectCard = ({ title, shortDesc, longDesc, tags, iconImage, link }) => (
     </div>
     <div className="p-6 flex flex-col flex-1">
       <div className="flex flex-wrap gap-2 mb-3">
-        {tags.map((tag) => <Tag key={tag}>{tag}</Tag>)}
+        {tags.map((tag) => (
+          <Tag key={tag}>{tag}</Tag>
+        ))}
       </div>
       <h3 className="text-text-1 font-semibold text-lg mb-2">{title}</h3>
-      <p className="text-text-2 text-sm leading-relaxed mb-2 hidden xl:block flex-1">{longDesc}</p>
-      <p className="text-text-2 text-sm leading-relaxed mb-4 xl:hidden flex-1">{shortDesc}</p>
+      <p className="text-text-2 text-sm leading-relaxed mb-2 hidden xl:block flex-1">
+        {longDesc}
+      </p>
+      <p className="text-text-2 text-sm leading-relaxed mb-4 xl:hidden flex-1">
+        {shortDesc}
+      </p>
       <a
         href={link}
         target="_blank"
@@ -37,27 +48,40 @@ const ProjectsPage = () => (
   <motion.div {...pageTransition}>
     <Helmet>
       <title>Kaine Binch | Projects</title>
-      <meta name="description" content="A collection of projects built by Kaine Binch — from pixel art generators to React admin dashboards and sorting algorithm visualisers." />
+      <meta
+        name="description"
+        content="A collection of projects built by Kaine Binch - from pixel art generators to React admin dashboards and sorting algorithm visualisers."
+      />
       <meta property="og:title" content="Kaine Binch | Projects" />
-      <meta property="og:description" content="A collection of projects built by Kaine Binch — from pixel art generators to React admin dashboards and sorting algorithm visualisers." />
+      <meta
+        property="og:description"
+        content="A collection of projects built by Kaine Binch - from pixel art generators to React admin dashboards and sorting algorithm visualisers."
+      />
       <meta property="og:image" content="/images/profile/kaine.webp" />
       <meta property="og:type" content="website" />
     </Helmet>
 
     <Container className="pt-32 pb-24">
-      <motion.div variants={fadeIn} initial="hidden" whileInView="show" viewport={{ once: true }}>
-        <p className="text-label uppercase tracking-widest text-text-2 mb-2">My Work</p>
+      <motion.div
+        variants={fadeIn}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}>
+        <p className="text-label uppercase tracking-widest text-text-2 mb-2">
+          My Work
+        </p>
         <h1 className="text-hero text-text-1 mb-4">Projects</h1>
         <p className="text-text-2 max-w-xl leading-relaxed mb-4">
-          A collection of things I&apos;ve built — from weekend experiments to more
-          complete applications. For everything else, check out{" "}
+          A collection of things I&apos;ve built - from weekend experiments to
+          more complete applications. For everything else, check out{" "}
           <a
             href="https://github.com/KaineBinch"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
             my GitHub profile
-          </a>.
+          </a>
+          .
         </p>
       </motion.div>
 

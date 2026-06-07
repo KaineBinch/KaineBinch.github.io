@@ -63,7 +63,7 @@ const ContactForm = ({ formData, handleChange, handleSubmit, formStatus }) => (
       </Button>
       {formStatus === "success" && (
         <p className="text-green-400 text-sm text-center">
-          Message sent — I&apos;ll be in touch!
+          Message sent - I&apos;ll be in touch!
         </p>
       )}
       {formStatus === "error" && (

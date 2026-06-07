@@ -7,7 +7,7 @@ const springValues = {
   mass: 2,
 }
 
-// Content wrapper mode — wraps any children with tilt motion, natural sizing.
+// Content wrapper mode - wraps any children with tilt motion, natural sizing.
 // Used when no imageSrc is provided.
 export function TiltWrapper({
   children,
@@ -55,7 +55,7 @@ export function TiltWrapper({
   )
 }
 
-// Original TiltedCard — image-focused, kept intact for existing usage.
+// Original TiltedCard - image-focused, kept intact for existing usage.
 export default function TiltedCard({
   imageSrc,
   altText = "Tilted card image",
@@ -130,7 +130,13 @@ export default function TiltedCard({
       )}
       <motion.div
         className="relative [transform-style:preserve-3d]"
-        style={{ width: imageWidth, height: imageHeight, rotateX, rotateY, scale }}>
+        style={{
+          width: imageWidth,
+          height: imageHeight,
+          rotateX,
+          rotateY,
+          scale,
+        }}>
         {imageSrc ? (
           <motion.img
             src={imageSrc}

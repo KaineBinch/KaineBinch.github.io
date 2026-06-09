@@ -5,7 +5,11 @@
 #root {
   margin: 0;
   padding: 0;
-  text-align: center;
+}
+
+body {
+  background-color: #0f0f0f;
+  color: #ffffff;
 }
 
 /* Print styles */

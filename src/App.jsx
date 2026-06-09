@@ -1,7 +1,16 @@
 import { Route, Routes, useLocation } from "react-router-dom"
+import { AnimatePresence } from "framer-motion"
 import "./App.css"
-import { HomePage, NotFound, ProjectsPage, CvPage, WorkPage } from "./pages"
+import {
+  HomePage,
+  AboutPage,
+  ProjectsPage,
+  ContactPage,
+  CvPage,
+  NotFound,
+} from "./pages"
 import Navbar from "./components/navbar"
+import Footer from "./components/layout/Footer"
 import { appRoutes } from "./constants/appRoutes"
 import ScrollToTop from "./components/scrollToTop"
 
@@ -11,14 +20,17 @@ function App() {
     <>
       <ScrollToTop />
       <Navbar />
-      <Routes location={location} key={location.pathname}>
-        <Route exact path={appRoutes.home} element={<HomePage />} />
-
-        <Route exact path={appRoutes.work} element={<WorkPage />} />
-        <Route exact path={appRoutes.cv} element={<CvPage />} />
-        <Route exact path={appRoutes.projects} element={<ProjectsPage />} />
-        <Route path={appRoutes.notFound} element={<NotFound />} />
-      </Routes>
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route path={appRoutes.home}     element={<HomePage />} />
+          <Route path={appRoutes.about}    element={<AboutPage />} />
+          <Route path={appRoutes.projects} element={<ProjectsPage />} />
+          <Route path={appRoutes.contact}  element={<ContactPage />} />
+          <Route path={appRoutes.cv}       element={<CvPage />} />
+          <Route path={appRoutes.notFound} element={<NotFound />} />
+        </Routes>
+      </AnimatePresence>
+      <Footer />
     </>
   )
 }

@@ -1,149 +1,167 @@
-import { useEffect, useRef, useState } from "react"
-import gsap from "gsap"
-import { useGSAP } from "@gsap/react"
-import SplitText from "../utils/splitText"
-import { motion as m } from "framer-motion"
-import AOS from "aos"
-import "aos/dist/aos.css"
-import HomeProject from "../components/homepage/homeProject"
-import { projects } from "../constants/projects"
+import { useState } from "react"
+import { motion } from "framer-motion"
+import { Helmet } from "react-helmet-async"
+import kaineHead from "../assets/kaineHeadNewNew.png"
+import Button from "../components/ui/Button"
+import Container from "../components/layout/Container"
+import { pageTransition, fadeUp, fadeIn } from "../constants/motionVariants"
+import AboutBlurb from "../components/homepage/AboutBlurb"
+import ContactForm from "../components/homepage/ContactForm"
+import ProjectsCarousel from "../components/homepage/ProjectsCarousel"
+import ProjectsGrid from "../components/homepage/ProjectsGrid"
 
-const styles = {
-  clipPath: { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" },
-}
+const FORMSPREE_ID = "xnjyzqbb"
 
 const HomePage = () => {
-  const container = useRef()
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" })
+  const [formStatus, setFormStatus] = useState("")
 
-  useGSAP(
-    () => {
-      gsap.to(".char", {
-        y: 0,
-        stagger: 0.1,
-        delay: 0.3,
-        duration: 0.6,
+  const handleChange = (e) =>
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }))
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+            ...formData,
+            _subject: `Portfolio enquiry from ${formData.name}`,
+            _replyto: formData.email,
+          }),
       })
-    },
-    { scope: container },
-  )
-
-  useEffect(() => {
-    AOS.init({ duration: 1000 })
-  }, [])
-
-  const ProjectList = ({ projects }) => {
-    const [visibleProjects, setVisibleProjects] = useState(3)
-
-    const handleSeeMore = () => {
-      setVisibleProjects((prev) => prev + 5)
+      if (res.ok) {
+        setFormStatus("success")
+        setFormData({ name: "", email: "", message: "" })
+        setTimeout(() => setFormStatus(""), 5000)
+      } else {
+        setFormStatus("error")
+        setTimeout(() => setFormStatus(""), 5000)
+      }
+    } catch {
+      setFormStatus("error")
     }
-
-    return (
-      <>
-        <div data-aos="fade-right">
-          <hr className="border-neutral" />
-          {projects.slice(0, visibleProjects).map((project, i) => (
-            <HomeProject key={i} title={project.title} link={project.link} />
-          ))}
-          {visibleProjects < projects.length && (
-            <span
-              onClick={handleSeeMore}
-              className="cursor-pointer text-primary mt-4 block self-start"
-              style={{
-                fontWeight: "bold",
-                fontSize: "16px",
-              }}>
-              See More...
-            </span>
-          )}
-        </div>
-      </>
-    )
   }
 
   return (
-    <div className="overflow-x-hidden">
-      <div className="hero min-h-[92svh]">
-        <div className="hero-content text-center">
-          <div className="max-w-full">
-            <div className="" style={styles.clipPath} ref={container}>
-              {SplitText(
-                "Kaine Binch",
-                "md:text-8xl text-6xl font-bold -translate-y-full",
-              )}
-            </div>
-            <m.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.8 }}
-              className="py-6">
-              Nottingham based software engineer dedicated to transforming ideas
-              into efficient, user-centric solutions. With a fresh perspective
-              and a passion for innovation, my portfolio showcases projects that
-              reflect my commitment to excellence in coding.
-            </m.p>
-          </div>
-        </div>
-      </div>
-      <hr className="border-neutral-300" />
-      <div className="max-w-screen flex bg-neutral md:flex-row flex-col p-10 overflow-x-hidden">
-        <div className="flex-1 text-neutral-200" data-aos="fade-right">
-          <h1 className="text-5xl font-bold mb-5">About me</h1>
-          <a
-            className="btn btn-primary text-neutral-200 hidden md:inline-flex"
-            href="/#/work">
-            Learn more
-          </a>
-        </div>
-        <div
-          className="flex flex-col flex-[2] px-2 text-start text-neutral-200"
-          data-aos="fade-left">
-          <p>
-            I’m a passionate software developer with a knack for turning ideas
-            into reality. My journey began with self-taught programming, and I
-            specialize in building user-friendly applications using JavaScript,
-            React, and Tailwind CSS.
-            <br />
-            I thrive on solving complex problems and enjoy collaborating with
-            others to create innovative solutions. Constantly exploring new
-            technologies, I aim to stay at the forefront of the ever-evolving
-            tech landscape.
-            <br />
-            When I’m not coding, you’ll find me experimenting with design or
-            diving into the latest programming trends.
-          </p>
-          <a
-            className="btn btn-primary md:hidden mt-5 self-center"
-            href="/#/about">
-            Learn more
-          </a>
-        </div>
-      </div>
-      <div className="max-w-full flex flex-col mt-3 md:flex-row md:flex-row-reverse flex-col mb-5 p-10">
-        <div className="flex-1 text-neutral" data-aos="fade-left">
-          <h1 className="text-5xl font-bold">Projects</h1>
-          <p className="m-5">
-            Take a look at my latest projects and see what I’m building.
-          </p>
-          <a
-            className="btn btn-primary text-neutral-200 hidden md:inline-flex"
-            href="/#/projects">
-            Explore Projects
-          </a>
-        </div>
-        <div className="flex flex-col flex-[2] p-2 mb-1 md:text-start text-neutral-200">
-          <ProjectList projects={projects} />
+    <motion.div {...pageTransition}>
+      <Helmet>
+        <title>Kaine Binch | Software Engineer</title>
+        <meta
+          name="description"
+          content="Nottingham based software engineer building fast, user-focused applications with React, TypeScript, and modern full-stack tooling."
+        />
+        <meta property="og:title" content="Kaine Binch | Software Engineer" />
+        <meta
+          property="og:description"
+          content="Nottingham based software engineer building fast, user-focused applications with React, TypeScript, and modern full-stack tooling."
+        />
+        <meta property="og:image" content="/images/profile/kaine.webp" />
+        <meta property="og:type" content="website" />
+      </Helmet>
 
-          <div data-aos="fade-right">
-            <a
-              className="btn btn-primary md:hidden mt-5 self-center"
-              href="/#/projects">
-              Explore Projects
-            </a>
+      {/* ── Hero ── */}
+      <section className="pt-24 lg:pt-32 pb-6 lg:pb-12">
+        <Container className="w-full">
+          <div className="flex flex-col gap-10 md:gap-3">
+            <motion.div
+              variants={fadeIn}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}>
+              <p className="text-label uppercase tracking-widest text-text-2 -mb-10">
+                Software Engineer &amp; Developer
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="grid grid-cols-[3fr_2fr] items-center"
+              variants={fadeIn}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}>
+              <div className="mr-6">
+                <h1 className="text-hero">
+                  <span className="block text-text-1">Hi, I&apos;m</span>
+                  <span className="block text-primary">Kaine Binch.</span>
+                </h1>
+              </div>
+              <div className="flex w-full">
+                <div className="flex relative w-full justify-center">
+                  <div
+                    className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl max-w-[350px]"
+                    style={{ maxHeight: "clamp(8rem, 28vh, 16rem)" }}>
+                    <img
+                      src={kaineHead}
+                      alt="Kaine Binch, software engineer"
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}>
+              <p className="text-text-2 text-lg mb-8 max-w-md leading-relaxed">
+                Nottingham based developer building fast, user-focused
+                applications with React, TypeScript, and modern full-stack
+                tooling.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button href="/#/projects">View My Work</Button>
+                <Button variant="secondary" href="/#/about">
+                  About Me
+                </Button>
+              </div>
+            </motion.div>
+          </div>
+        </Container>
+      </section>
+
+      {/* ── Mobile: About → Projects carousel → Contact ── */}
+      <div className="lg:hidden">
+        <Container className="py-8">
+          <AboutBlurb />
+        </Container>
+
+        <ProjectsCarousel />
+
+        <Container className="py-8 pb-16">
+          <ContactForm
+            formData={formData}
+            handleChange={handleChange}
+            handleSubmit={handleSubmit}
+            formStatus={formStatus}
+          />
+        </Container>
+      </div>
+
+      {/* ── Desktop: Projects left | About + Contact right ── */}
+      <Container className="hidden lg:block py-8 pb-16">
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
+          <div className="lg:col-span-3 h-full">
+            <ProjectsGrid />
+          </div>
+          <div className="lg:col-span-2 flex flex-col gap-16">
+            <AboutBlurb />
+            <ContactForm
+              formData={formData}
+              handleChange={handleChange}
+              handleSubmit={handleSubmit}
+              formStatus={formStatus}
+            />
           </div>
         </div>
-      </div>
-    </div>
+      </Container>
+    </motion.div>
   )
 }
 

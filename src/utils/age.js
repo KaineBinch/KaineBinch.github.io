@@ -8,4 +8,3 @@ export const getAge = () => {
       currentDate.getDate() < birthday.getDate())
     ? age - 1 : age
 }
-

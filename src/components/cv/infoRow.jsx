@@ -1,9 +1,7 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 const InfoRow = ({
   text,
   link,
-  icon,
+  icon: Icon,
   iconOverride,
   title,
   isHeader = false,
@@ -13,8 +11,8 @@ const InfoRow = ({
     <a className="w-full" href={link} target="_blank" rel="noreferrer">
       <div className="flex flex-row items-center pt-[25px] place-content-between w-full">
         <div>
-          {icon ? (
-            <FontAwesomeIcon className="w-[25px] h-[25px]" icon={icon} />
+          {Icon ? (
+            <Icon className="w-[25px] h-[25px]" size={25} />
           ) : iconOverride ? (
             <img src={iconOverride} className="h-[21.5px]" />
           ) : (
@@ -28,7 +26,7 @@ const InfoRow = ({
             <p
               key={i}
               className={`text-end ${
-                !isHeader && !icon && !iconOverride ? "font-bold" : ""
+                !isHeader && !Icon && !iconOverride ? "font-bold" : ""
               }`}
             >
               {t}

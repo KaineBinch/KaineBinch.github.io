@@ -1,57 +1,57 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"
+import { Helmet } from "react-helmet-async"
+import { motion } from "framer-motion"
+import Button from "../components/ui/Button"
+import { pageTransition } from "../constants/motionVariants"
 
-const INITIAL_REDIRECT_TIME = 10;
+const INITIAL_REDIRECT_TIME = 10
 
 const NotFound = () => {
-  const [redirectTime, setRedirectTime] = useState(INITIAL_REDIRECT_TIME);
+  const [redirectTime, setRedirectTime] = useState(INITIAL_REDIRECT_TIME)
+
   useEffect(() => {
     const timeout = setTimeout(() => {
-      if (redirectTime > 0) setRedirectTime(redirectTime - 1);
-      else window.location.href = "/";
-    }, 1000);
-    return () => {
-      clearTimeout(timeout);
-    };
-  }, [redirectTime]);
-  const getStyles = () => ({
-    progressBar: {
-      width: 245 * (redirectTime / INITIAL_REDIRECT_TIME),
-      transition: "all 1s ease-in-out",
-    },
-  });
-  const styles = getStyles();
+      if (redirectTime > 0) setRedirectTime((t) => t - 1)
+      else window.location.href = "/"
+    }, 1000)
+    return () => clearTimeout(timeout)
+  }, [redirectTime])
+
+  const progress = (redirectTime / INITIAL_REDIRECT_TIME) * 100
+
   return (
-    <div
-      className="hero min-h-screen"
-      style={{
-        backgroundImage:
-          "url(https://images.unsplash.com/photo-1602212096437-d0af1ce0553e?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
-      }}
-    >
-      <div className="hero-overlay bg-opacity-30"></div>
-      <div className="hero-content text-center text-neutral-content">
-        <div className="max-w-md">
-          <h1 className="text-8xl font-bold">404</h1>
-          <p className="mb-10">Looks like that page isn{"'"}t available</p>
-          <div
-            style={styles.progressBar}
-            className="h-16 -mb-16 bg-secondary"
-          />
-          <div className="h-16 w-[245px] relative bg-black p-1 border-double border-4 border-secondary bg-opacity-60">
-            <p>
-              Automatically sending you home in:{" "}
-              <span className="countdown mt-1">
-                <span style={{ "--value": redirectTime }}></span>
-              </span>
-              s
-            </p>
-            <a href="/" className="btn mt-8">
-              Take me home now!
-            </a>
+    <motion.div
+      {...pageTransition}
+      className="min-h-screen flex items-center justify-center px-6">
+      <Helmet>
+        <title>Kaine Binch | 404</title>
+      </Helmet>
+
+      <div className="text-center max-w-sm">
+        <p className="text-label uppercase tracking-widest text-text-2 mb-4">
+          Page Not Found
+        </p>
+        <h1 className="text-hero text-primary mb-4">404</h1>
+        <p className="text-text-2 mb-10 leading-relaxed">
+          That page doesn&apos;t exist. You&apos;ll be sent home automatically.
+        </p>
+
+        <div className="mb-6">
+          <div className="h-1 bg-white/10 rounded-full overflow-hidden mb-2">
+            <div
+              className="h-full bg-primary rounded-full transition-all duration-1000 ease-linear"
+              style={{ width: `${progress}%` }}
+            />
           </div>
+          <p className="text-text-2 text-xs">
+            Redirecting in {redirectTime}s&hellip;
+          </p>
         </div>
+
+        <Button href="/#/">Take me home now</Button>
       </div>
-    </div>
-  );
-};
-export default NotFound;
+    </motion.div>
+  )
+}
+
+export default NotFound

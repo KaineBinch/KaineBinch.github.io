@@ -29,16 +29,11 @@ export const jobs = [
     jobTitle: "Care Team Leader (Project Lead)",
     bulletDesc: [
       "I exclusively developed and spearheaded a new Spot Contracting framework for homecare agencies, which encompassed auditing, inspection, and negotiation processes. This initiative significantly reduced wait times within Nottingham City.",
-
       "Build and maintain positive relationships with individuals at all levels within the organization, as well as with external stakeholders.",
-
       "Negotiated hourly rates with care agencies to strike a balance between adhering to council standards and aligning with industry norms.",
-
       "Implemented an efficient bidding process for external care providers, adhering to data protection regulations and efficiency principles.",
-
       "Adapted communication style to effectively engage with diverse audiences, both internally and externally.",
       "Identified and implemented best practices that streamlined the auditing and inspection processes, resulting in improved service quality and reduced operational costs.",
-
     ],
     fullDesc: "I led the development of a Spot Contracting framework for homecare agencies in Nottingham City, streamlining auditing, inspection, and negotiation processes to significantly reduce wait times. Building positive relationships internally and externally, I negotiated hourly rates with care agencies, balancing council standards with industry norms. Implementing an efficient bidding process for external providers, I ensured compliance with data protection regulations. Collaboration was key; I worked closely with staff to continuously improve systems. Adapting my communication style, I effectively engaged diverse audiences, both internally and externally. These efforts streamlined operations, fostered collaboration, and promoted transparent and fair practices, ultimately enhancing care service quality and efficiency.",
     dates: "Aug 2022 - Sep 2024",

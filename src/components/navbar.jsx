@@ -3,7 +3,7 @@ import BubbleNavbar from "./ui/Navbar"
 const Navbar = () => {
   return (
     <div className="print:hidden">
-      <BubbleNavbar baseColor="rgba(9, 41, 96, 0.1)" />
+      <BubbleNavbar baseColor="rgba(9, 9, 11, 0.4)" />
     </div>
   )
 }

@@ -1,6 +1,8 @@
 import { motion as m } from "framer-motion"
 import InfoRow from "./infoRow"
 import ExercismIcon from "../../assets/exercismLogo.png"
+import { FaPhone, FaEnvelope, FaHome, FaGlobe, FaGithub, FaLinkedin } from "react-icons/fa"
+import { FaHackerrank } from "react-icons/fa6"
 import {
   personalInfo,
   contactInfo,
@@ -8,6 +10,12 @@ import {
   technicalSkillsArray,
   education,
 } from "../../constants/cvData"
+
+const iconMap = {
+  "fa-brands fa-github": FaGithub,
+  "fa-brands fa-linkedin": FaLinkedin,
+  "fa-brands fa-hackerrank": FaHackerrank,
+}
 
 const CvLeftPane = () => {
   return (
@@ -58,29 +66,29 @@ const CvLeftPane = () => {
             <div className="flex flex-col items-center text-[#1c1a73] text-[16px] md:pl-5 lg:pl-0 md:px-0 px-10">
               <div className="w-full md:hidden flex">
                 <InfoRow
-                  icon="fa-solid fa-phone"
+                  icon={FaPhone}
                   text={contactInfo.phone.number}
                   link={contactInfo.phone.link}
                 />
               </div>
               <div className="w-full md:flex hidden">
                 <InfoRow
-                  icon="fa-solid fa-phone"
+                  icon={FaPhone}
                   text={contactInfo.phone.number}
                 />
               </div>
               <InfoRow
-                icon="fa-solid fa-envelope"
+                icon={FaEnvelope}
                 text={contactInfo.email.address}
                 link={contactInfo.email.link}
               />
               <InfoRow
-                icon="fa-solid fa-house"
+                icon={FaHome}
                 text={contactInfo.location.address}
                 link={contactInfo.location.link}
               />
               <InfoRow
-                icon="fa-solid fa-globe"
+                icon={FaGlobe}
                 text={contactInfo.website.url}
                 link={contactInfo.website.link}
               />
@@ -97,7 +105,7 @@ const CvLeftPane = () => {
               {onlineProfiles.map((profile, index) => (
                 <InfoRow
                   key={index}
-                  icon={profile.iconOverride ? undefined : profile.icon}
+                  icon={profile.iconOverride ? undefined : iconMap[profile.icon]}
                   iconOverride={profile.iconOverride ? ExercismIcon : undefined}
                   text={[profile.username, profile.platform]}
                   link={profile.link}

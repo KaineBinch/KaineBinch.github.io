@@ -36,7 +36,7 @@ const GlassNavbar = ({ baseColor = "rgba(255, 255, 255)" }) => {
   return (
     <>
       {/* Desktop Nav */}
-      <div className="fixed top-[2em] left-0 right-0 z-[99] hidden md:flex justify-center pointer-events-none">
+      <div className="fixed top-[2em] left-0 right-0 z-[99] hidden md:flex justify-center pointer-events-none print:hidden">
         <motion.nav
           aria-label="main navigation"
           initial={{ opacity: 0, y: -20 }}
@@ -118,7 +118,7 @@ const GlassNavbar = ({ baseColor = "rgba(255, 255, 255)" }) => {
       </div>
 
       {/* Mobile Nav */}
-      <div className="fixed top-[1.2em] left-4 z-[99] md:hidden pointer-events-none">
+      <div className="fixed top-[1.2em] left-4 z-[99] md:hidden pointer-events-none print:hidden">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{

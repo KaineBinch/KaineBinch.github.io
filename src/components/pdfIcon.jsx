@@ -1,11 +1,11 @@
 import { motion as m } from "framer-motion";
 
 const PdfIcon = () => {
-  const print = () => {
-    window.print();
-  };
   return (
     <m.a
+      href="/resume.pdf"
+      target="_blank"
+      rel="noreferrer"
       initial={{ opacity: 0, x: -20, y: 10 }}
       animate={{ opacity: 1, x: 0, y: 0 }}
       transition={{
@@ -14,10 +14,7 @@ const PdfIcon = () => {
         ease: "easeInOut",
       }}
       exit={{ opacity: 0, x: 6, y: 10 }}
-      onClick={print}
-      className="print:hidden cursor-pointer"
-      rel="noreferrer"
-      target="_blank"
+      className="cursor-pointer"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

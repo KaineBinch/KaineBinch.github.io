@@ -12,36 +12,38 @@ import {
 import { projects } from "../constants/projects"
 
 const ProjectCard = ({ title, shortDesc, longDesc, tags, iconImage, link }) => (
-  <Card className="overflow-hidden group hover:border-white/20 transition-colors duration-300 flex flex-col h-full">
-    <div className="aspect-video overflow-hidden bg-bg flex-shrink-0">
-      <img
-        src={iconImage}
-        alt={`${title} project screenshot`}
-        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-      />
-    </div>
-    <div className="p-6 flex flex-col flex-1">
-      <div className="flex flex-wrap gap-2 mb-3">
-        {tags.map((tag) => (
-          <Tag key={tag}>{tag}</Tag>
-        ))}
+  <a
+    href={link}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block h-full rounded-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+    <Card className="overflow-hidden group hover:border-white/20 transition-colors duration-300 flex flex-col h-full cursor-pointer">
+      <div className="aspect-video overflow-hidden bg-bg flex-shrink-0">
+        <img
+          src={iconImage}
+          alt={`${title} project screenshot`}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+        />
       </div>
-      <h3 className="text-text-1 font-semibold text-lg mb-2">{title}</h3>
-      <p className="text-text-2 text-sm leading-relaxed mb-2 hidden xl:block flex-1">
-        {longDesc}
-      </p>
-      <p className="text-text-2 text-sm leading-relaxed mb-4 xl:hidden flex-1">
-        {shortDesc}
-      </p>
-      <a
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center gap-1 text-primary text-sm font-medium hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary mt-auto">
-        Take a look →
-      </a>
-    </div>
-  </Card>
+      <div className="p-6 flex flex-col flex-1">
+        <div className="flex flex-wrap gap-2 mb-3">
+          {tags.map((tag) => (
+            <Tag key={tag}>{tag}</Tag>
+          ))}
+        </div>
+        <h3 className="text-text-1 font-semibold text-lg mb-2">{title}</h3>
+        <p className="text-text-2 text-sm leading-relaxed mb-2 hidden xl:block flex-1">
+          {longDesc}
+        </p>
+        <p className="text-text-2 text-sm leading-relaxed mb-4 xl:hidden flex-1">
+          {shortDesc}
+        </p>
+        <span className="text-primary text-sm font-medium mt-auto">
+          Take a look →
+        </span>
+      </div>
+    </Card>
+  </a>
 )
 
 const ProjectsPage = () => (
@@ -91,7 +93,7 @@ const ProjectsPage = () => (
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, margin: "-60px" }}>
-        {projects.map((project) => (
+        {projects.filter((p) => p.title).map((project) => (
           <motion.div
             key={project.title}
             variants={fadeUp}

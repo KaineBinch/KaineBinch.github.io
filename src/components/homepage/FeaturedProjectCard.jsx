@@ -1,4 +1,5 @@
 import Card from "../ui/Card"
+import Tag from "../ui/Tag"
 
 const FeaturedProjectCard = ({ project, onClick }) => (
   <button
@@ -15,6 +16,9 @@ const FeaturedProjectCard = ({ project, onClick }) => (
         />
       </div>
       <div className="p-4 flex flex-col flex-1">
+        <div className="flex flex-wrap gap-1.5 mb-3">
+          {project.tags.map((tag) => <Tag key={tag}>{tag}</Tag>)}
+        </div>
         <h3 className="text-text-1 font-semibold text-base mb-1">{project.title}</h3>
         <p className="text-text-2 text-xs mb-3 leading-relaxed flex-1">{project.shortDesc}</p>
         <span className="text-primary text-sm font-medium mt-auto">View Project →</span>

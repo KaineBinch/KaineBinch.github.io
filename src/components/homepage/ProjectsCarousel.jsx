@@ -28,13 +28,19 @@ const ProjectsCarousel = () => {
 
         <div className="overflow-x-auto">
           <div className="flex gap-4 snap-x snap-mandatory scroll-smooth pb-4 px-6 lg:px-8">
-            {projects.slice(0, 6).map((project) => (
-              <div
-                key={project.title}
-                className="snap-start flex-shrink-0 w-[78vw] max-w-[300px]">
-                <FeaturedProjectCard project={project} onClick={() => setActive(project)} />
-              </div>
-            ))}
+            {projects
+              .filter((p) => p.title)
+              .slice(0, 3)
+              .map((project) => (
+                <div
+                  key={project.title}
+                  className="snap-start flex-shrink-0 w-[78vw] max-w-[300px]">
+                  <FeaturedProjectCard
+                    project={project}
+                    onClick={() => setActive(project)}
+                  />
+                </div>
+              ))}
             <div className="flex-shrink-0 w-2 lg:w-4" aria-hidden="true" />
           </div>
         </div>

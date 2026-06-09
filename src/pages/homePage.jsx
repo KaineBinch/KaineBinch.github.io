@@ -37,8 +37,10 @@ const HomePage = () => {
       if (res.ok) {
         setFormStatus("success")
         setFormData({ name: "", email: "", message: "" })
+        setTimeout(() => setFormStatus(""), 5000)
       } else {
         setFormStatus("error")
+        setTimeout(() => setFormStatus(""), 5000)
       }
     } catch {
       setFormStatus("error")

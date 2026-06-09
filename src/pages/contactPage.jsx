@@ -19,7 +19,7 @@ import {
 } from "../constants/motionVariants"
 import { contactInfo } from "../constants/cvData"
 
-const FORMSPREE_ID = "YOUR_FORM_ID"
+const FORMSPREE_ID = "mjgdovea"
 
 const socials = [
   { icon: FaGithub, label: "GitHub", href: "https://github.com/KaineBinch" },
@@ -50,6 +50,21 @@ const projectTypes = [
 const selectClasses =
   "w-full bg-surface border border-white/10 rounded-lg px-4 py-3 text-text-1 text-sm transition-colors duration-200 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary appearance-none cursor-pointer"
 
+const validate = (data) => {
+  const errs = {}
+  if (!data.name.trim()) errs.name = "Name is required"
+  if (!data.email.trim()) errs.email = "Email is required"
+  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email))
+    errs.email = "Enter a valid email address"
+  if (!data.projectType) errs.projectType = "Please select a project type"
+  if (!data.message.trim()) errs.message = "A message is required"
+  return errs
+}
+
+const FieldError = ({ msg }) => (
+  <p className="text-red-400 text-xs mt-1">{msg}</p>
+)
+
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -58,12 +73,22 @@ const ContactPage = () => {
     message: "",
   })
   const [formStatus, setFormStatus] = useState("")
+  const [errors, setErrors] = useState({})
 
-  const handleChange = (e) =>
+  const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }))
+    if (errors[e.target.name])
+      setErrors((prev) => ({ ...prev, [e.target.name]: "" }))
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    const errs = validate(formData)
+    if (Object.keys(errs).length) {
+      setErrors(errs)
+      return
+    }
+    setErrors({})
     try {
       const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
         method: "POST",
@@ -71,7 +96,11 @@ const ContactPage = () => {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          _subject: `[${formData.projectType || "Enquiry"}] from ${formData.name}`,
+          _replyto: formData.email,
+        }),
       })
       if (res.ok) {
         setFormStatus("success")
@@ -217,6 +246,7 @@ const ContactPage = () => {
               </h2>
               <form
                 onSubmit={handleSubmit}
+                noValidate
                 className="flex flex-col gap-3 flex-1">
                 <div className="flex flex-col gap-1">
                   <label
@@ -230,8 +260,9 @@ const ContactPage = () => {
                     placeholder="Kaine Binch"
                     value={formData.name}
                     onChange={handleChange}
-                    required
+                    error={!!errors.name}
                   />
+                  {errors.name && <FieldError msg={errors.name} />}
                 </div>
 
                 <div className="flex flex-col gap-1">
@@ -247,8 +278,9 @@ const ContactPage = () => {
                     placeholder="hello@example.com"
                     value={formData.email}
                     onChange={handleChange}
-                    required
+                    error={!!errors.email}
                   />
+                  {errors.email && <FieldError msg={errors.email} />}
                 </div>
 
                 <div className="flex flex-col gap-1">
@@ -262,8 +294,7 @@ const ContactPage = () => {
                     name="projectType"
                     value={formData.projectType}
                     onChange={handleChange}
-                    className={selectClasses}
-                    required>
+                    className={`${selectClasses} ${errors.projectType ? "border-red-500/60" : ""}`}>
                     <option
                       value=""
                       disabled
@@ -279,6 +310,9 @@ const ContactPage = () => {
                       </option>
                     ))}
                   </select>
+                  {errors.projectType && (
+                    <FieldError msg={errors.projectType} />
+                  )}
                 </div>
 
                 <div className="flex flex-col gap-1 flex-1">
@@ -295,8 +329,9 @@ const ContactPage = () => {
                     placeholder="Tell me about your project..."
                     value={formData.message}
                     onChange={handleChange}
-                    required
+                    error={!!errors.message}
                   />
+                  {errors.message && <FieldError msg={errors.message} />}
                 </div>
 
                 <Button type="submit" className="w-full justify-center">
@@ -304,14 +339,54 @@ const ContactPage = () => {
                 </Button>
 
                 {formStatus === "success" && (
-                  <p className="text-green-400 text-sm text-center">
-                    Message sent - I&apos;ll be in touch soon!
-                  </p>
+                  <div className="flex items-start gap-3 rounded-lg bg-green-500/10 border border-green-500/20 px-4 py-3">
+                    <svg
+                      className="text-green-400 mt-0.5 flex-shrink-0"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <div>
+                      <p className="text-green-400 text-sm font-medium">
+                        Message received!
+                      </p>
+                      <p className="text-green-400/70 text-xs mt-0.5">
+                        I&apos;ll get back to you as soon as I can.
+                      </p>
+                    </div>
+                  </div>
                 )}
                 {formStatus === "error" && (
-                  <p className="text-red-400 text-sm text-center">
-                    Something went wrong. Please try again.
-                  </p>
+                  <div className="flex items-start gap-3 rounded-lg bg-red-500/10 border border-red-500/20 px-4 py-3">
+                    <svg
+                      className="text-red-400 mt-0.5 flex-shrink-0"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="10" />
+                      <line x1="12" y1="8" x2="12" y2="12" />
+                      <line x1="12" y1="16" x2="12.01" y2="16" />
+                    </svg>
+                    <div>
+                      <p className="text-red-400 text-sm font-medium">
+                        Sorry - that didn&apos;t go through.
+                      </p>
+                      <p className="text-red-400/70 text-xs mt-0.5">
+                        Please try again or email me directly.
+                      </p>
+                    </div>
+                  </div>
                 )}
               </form>
             </Card>

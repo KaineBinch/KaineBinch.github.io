@@ -10,7 +10,7 @@ import ContactForm from "../components/homepage/ContactForm"
 import ProjectsCarousel from "../components/homepage/ProjectsCarousel"
 import ProjectsGrid from "../components/homepage/ProjectsGrid"
 
-const FORMSPREE_ID = "YOUR_FORM_ID"
+const FORMSPREE_ID = "xnjyzqbb"
 
 const HomePage = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" })
@@ -28,7 +28,11 @@ const HomePage = () => {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+            ...formData,
+            _subject: `Portfolio enquiry from ${formData.name}`,
+            _replyto: formData.email,
+          }),
       })
       if (res.ok) {
         setFormStatus("success")

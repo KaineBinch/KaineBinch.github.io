@@ -54,7 +54,7 @@ export const projects = [
     iconImage: trilodex1,
     images: [trilodex1, trilodex2],
     shortDesc: "Portfolio site for an independent software studio challenging bloated enterprise software with simple, affordable apps.",
-    longDesc: "The public-facing site for Trilodex, an independent software studio built around a 'Trinity' philosophy — simple, purposeful, and affordable. The site showcases the studio's products and values through smooth Framer Motion animations and a glass-morphism design, built with Next.js, TypeScript, and Tailwind.",
+    longDesc: "The public-facing site for Trilodex, an independent software studio built around a 'Trinity' philosophy - simple, purposeful, and affordable. The site showcases the studio's products and values through smooth Framer Motion animations and a glass-morphism design, built with Next.js, TypeScript, and Tailwind.",
     tags: ["Client Work", "Next.js", "TypeScript"],
     link: "https://trilodex.com"
   },

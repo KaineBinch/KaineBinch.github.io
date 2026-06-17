@@ -7,16 +7,16 @@ import teamb3 from "../assets/projectAssets/teamb3.png"
 import teamb4 from "../assets/projectAssets/teamb4.png"
 import trilodex1 from "../assets/projectAssets/trilodex1.png"
 import trilodex2 from "../assets/projectAssets/trilodex2.png"
-import DashboardImage from "../assets/projectAssets/dashboard.png"
-import DashboardImage2 from "../assets/projectAssets/dashboard2.png"
-import DashboardImage3 from "../assets/projectAssets/dashboard3.png"
-import passGen from "../assets/projectAssets/passwordGenerator.png"
+// import DashboardImage from "../assets/projectAssets/dashboard.png"
+// import DashboardImage2 from "../assets/projectAssets/dashboard2.png"
+// import DashboardImage3 from "../assets/projectAssets/dashboard3.png"
+// import passGen from "../assets/projectAssets/passwordGenerator.png"
 import pixelArt from "../assets/projectAssets/pixelArt.png"
 import pixelArt2 from "../assets/projectAssets/pixelArt2.png"
 import blockRotate from "../assets/projectAssets/blockRotate.png"
-import sortAlgorithm from "../assets/projectAssets/sortAlgorithms.png"
-import sortAlgorithm2 from "../assets/projectAssets/sortAlgorithms2.png"
-import calculator from "../assets/projectAssets/calculator.png"
+// import sortAlgorithm from "../assets/projectAssets/sortAlgorithms.png"
+// import sortAlgorithm2 from "../assets/projectAssets/sortAlgorithms2.png"
+// import calculator from "../assets/projectAssets/calculator.png"
 import djorme1 from "../assets/projectAssets/djorme1.png"
 import djorme2 from "../assets/projectAssets/djorme2.png"
 
@@ -78,15 +78,15 @@ export const projects = [
   //   tags: ["Next.js", "TypeScript", "Supabase"],
   //   link: "https://karriskainewedding.com"
   // },
-  {
-    title: "Password Generator",
-    iconImage: passGen,
-    images: [passGen],
-    shortDesc: "A simple password generator along with a copy function for easy to use password creation.",
-    longDesc: "A simple and straightforward password generator with a view to simplify the password generation process with unique and secure passwords. This project also includes a copy function to further ease the process.",
-    tags: ["Tool", "JavaScript", "Personal"],
-    link: "https://kainebinch.dev/PasswordGenerator"
-  },
+  // {
+  //   title: "Password Generator",
+  //   iconImage: passGen,
+  //   images: [passGen],
+  //   shortDesc: "A simple password generator along with a copy function for easy to use password creation.",
+  //   longDesc: "A simple and straightforward password generator with a view to simplify the password generation process with unique and secure passwords. This project also includes a copy function to further ease the process.",
+  //   tags: ["Tool", "JavaScript", "Personal"],
+  //   link: "https://kainebinch.dev/PasswordGenerator"
+  // },
   {
     title: "Pixel Art Generator",
     iconImage: pixelArt,
@@ -96,15 +96,15 @@ export const projects = [
     tags: ["Creative", "JavaScript", "Personal"],
     link: "https://kainebinch.dev/Grid-Painter"
   },
-  {
-    title: "React Admin Dashboard",
-    iconImage: DashboardImage,
-    images: [DashboardImage, DashboardImage2, DashboardImage3],
-    shortDesc: "A versatile tool integrating datasets for comprehensive overviews and centralized data storage.",
-    longDesc: "This project is a versatile tool designed for seamless integration with diverse datasets. It offers users a comprehensive overview of data at a glance while serving as a centralized repository for all related information.",
-    tags: ["Dashboard", "ReactJs", "Data Visualisation"],
-    link: "https://kainebinch.dev/adminDashboard",
-  },
+  // {
+  //   title: "React Admin Dashboard",
+  //   iconImage: DashboardImage,
+  //   images: [DashboardImage, DashboardImage2, DashboardImage3],
+  //   shortDesc: "A versatile tool integrating datasets for comprehensive overviews and centralized data storage.",
+  //   longDesc: "This project is a versatile tool designed for seamless integration with diverse datasets. It offers users a comprehensive overview of data at a glance while serving as a centralized repository for all related information.",
+  //   tags: ["Dashboard", "ReactJs", "Data Visualisation"],
+  //   link: "https://kainebinch.dev/adminDashboard",
+  // },
   {
     title: "Rotating Blocks",
     iconImage: blockRotate,
@@ -114,22 +114,22 @@ export const projects = [
     tags: ["Creative", "JavaScript", "Personal"],
     link: "https://kainebinch.dev/Rotating-Blocks"
   },
-  {
-    title: "Calculator",
-    iconImage: calculator,
-    images: [calculator],
-    shortDesc: "An easy-to-use calculator designed to perform fundamental arithmetic tasks with simplicity and precision.",
-    longDesc: "An easy-to-use calculator designed to perform fundamental arithmetic tasks with simplicity and precision.",
-    tags: ["Tool", "JavaScript", "Personal"],
-    link: "https://kainebinch.dev/Calculator"
-  },
-  {
-    title: "Sorting Algorithms",
-    iconImage: sortAlgorithm,
-    images: [sortAlgorithm, sortAlgorithm2],
-    shortDesc: "Sorting algorithms with detailed implementations and visualizations, focusing on algorithm analysis",
-    longDesc: "Sorting algorithms with detailed implementations and visualizations, focusing on algorithm analysis",
-    tags: ["Visualisation", "JavaScript", "Personal"],
-    link: "https://kainebinch.dev/Sorting-Algorithms"
-  },
+  // {
+  //   title: "Calculator",
+  //   iconImage: calculator,
+  //   images: [calculator],
+  //   shortDesc: "An easy-to-use calculator designed to perform fundamental arithmetic tasks with simplicity and precision.",
+  //   longDesc: "An easy-to-use calculator designed to perform fundamental arithmetic tasks with simplicity and precision.",
+  //   tags: ["Tool", "JavaScript", "Personal"],
+  //   link: "https://kainebinch.dev/Calculator"
+  // },
+  // {
+  //   title: "Sorting Algorithms",
+  //   iconImage: sortAlgorithm,
+  //   images: [sortAlgorithm, sortAlgorithm2],
+  //   shortDesc: "Sorting algorithms with detailed implementations and visualizations, focusing on algorithm analysis",
+  //   longDesc: "Sorting algorithms with detailed implementations and visualizations, focusing on algorithm analysis",
+  //   tags: ["Visualisation", "JavaScript", "Personal"],
+  //   link: "https://kainebinch.dev/Sorting-Algorithms"
+  // },
 ]

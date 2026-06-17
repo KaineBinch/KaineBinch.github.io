@@ -17,6 +17,8 @@ import blockRotate from "../assets/projectAssets/blockRotate.png"
 import sortAlgorithm from "../assets/projectAssets/sortAlgorithms.png"
 import sortAlgorithm2 from "../assets/projectAssets/sortAlgorithms2.png"
 import calculator from "../assets/projectAssets/calculator.png"
+import djorme1 from "../assets/projectAssets/djorme1.png"
+import djorme2 from "../assets/projectAssets/djorme2.png"
 
 /*
   {
@@ -41,15 +43,6 @@ export const projects = [
     link: "https://www.nottsalliance.com"
   },
   {
-    title: "TeamB Coaching",
-    iconImage: teamb,
-    images: [teamb, teamb2, teamb3, teamb4],
-    shortDesc: "A professional football coaching website for a UK-based academy with programme details and integrated contact forms.",
-    longDesc: "A clean, responsive single-page site for TeamB Coaching, a UK football academy offering age-specific training programmes. Built with React and Tailwind, it features programme breakdowns by age group, coach profiles, a live embedded Facebook feed, and a fully validated contact and registration form powered by EmailJS.",
-    tags: ["Client Work", "ReactJs", "Frontend"],
-    link: "https://teambcoaching.co.uk"
-  },
-  {
     title: "Trilodex",
     iconImage: trilodex1,
     images: [trilodex1, trilodex2],
@@ -57,6 +50,24 @@ export const projects = [
     longDesc: "The public-facing site for Trilodex, an independent software studio built around a 'Trinity' philosophy - simple, purposeful, and affordable. The site showcases the studio's products and values through smooth Framer Motion animations and a glass-morphism design, built with Next.js, TypeScript, and Tailwind.",
     tags: ["Client Work", "Next.js", "TypeScript"],
     link: "https://trilodex.com"
+  },
+  {
+    title: "DJ Orme Plumbing & Heating",
+    iconImage: djorme1,
+    images: [djorme1, djorme2],
+    shortDesc: "A responsive, conversion-focused website for a Gas Safe registered plumbing and heating company serving Nottinghamshire and Derbyshire.",
+    longDesc: "A professional service website for DJ Orme Plumbing & Heating, built to generate leads and build trust with homeowners and landlords. Features service breakdowns across boiler installation, central heating, emergency call-outs and gas safety certificates, alongside customer testimonials, Gas Safe registration trust signals, and a contact enquiry form.",
+    tags: ["Client Work", "Next.js", "Playwright"],
+    link: "https://djorme.com"
+  },
+  {
+    title: "TeamB Coaching",
+    iconImage: teamb,
+    images: [teamb, teamb2, teamb3, teamb4],
+    shortDesc: "A professional football coaching website for a UK-based academy with programme details and integrated contact forms.",
+    longDesc: "A clean, responsive single-page site for TeamB Coaching, a UK football academy offering age-specific training programmes. Built with React and Tailwind, it features programme breakdowns by age group, coach profiles, a live embedded Facebook feed, and a fully validated contact and registration form powered by EmailJS.",
+    tags: ["Client Work", "ReactJs", "Frontend"],
+    link: "https://teambcoaching.co.uk"
   },
   // {
   //   title: "Karris & Kaine Wedding",

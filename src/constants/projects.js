@@ -19,6 +19,8 @@ import blockRotate from "../assets/projectAssets/blockRotate.png"
 // import calculator from "../assets/projectAssets/calculator.png"
 import djorme1 from "../assets/projectAssets/djorme1.png"
 import djorme2 from "../assets/projectAssets/djorme2.png"
+import kk1 from "../assets/projectAssets/kk1.png"
+import kk2 from "../assets/projectAssets/kk2.png"
 
 /*
   {
@@ -69,15 +71,15 @@ export const projects = [
     tags: ["Client Work", "ReactJs", "Frontend"],
     link: "https://teambcoaching.co.uk"
   },
-  // {
-  //   title: "Karris & Kaine Wedding",
-  //   iconImage: "",
-  //   images: [],
-  //   shortDesc: "A personalised wedding website with RSVP management, meal selection, and a guest admin dashboard.",
-  //   longDesc: "A bespoke wedding site for our November 2026 celebration, featuring a full RSVP system with family grouping, 3-course meal selection, and dietary preference tracking. Backed by Supabase for real-time data, with a password-protected admin dashboard for managing guests and exporting lists. Built with Next.js, TypeScript, and Tailwind.",
-  //   tags: ["Next.js", "TypeScript", "Supabase"],
-  //   link: "https://karriskainewedding.com"
-  // },
+  {
+    title: "Karris & Kaine Wedding",
+    iconImage: kk1,
+    images: [kk1, kk2],
+    shortDesc: "A personalised wedding website with RSVP management, meal selection, and a guest admin dashboard.",
+    longDesc: "A bespoke wedding site for our November 2026 celebration, featuring a full RSVP system with family grouping, 3-course meal selection, and dietary preference tracking. Backed by Supabase for real-time data, with a password-protected admin dashboard for managing guests and exporting lists. Built with Next.js, TypeScript, and Tailwind.",
+    tags: ["Next.js", "TypeScript", "Supabase"],
+    link: "https://karriskainewedding.com"
+  },
   // {
   //   title: "Password Generator",
   //   iconImage: passGen,
